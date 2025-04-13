@@ -48,3 +48,5 @@
 ## xem lai clip giai thich ve residual connection (tam 1:28:00)
 
 ## Xem lai cai projection (Wo)
+
+## Try code from scratch layer norm (1:35:00)

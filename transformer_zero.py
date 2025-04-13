@@ -3,7 +3,7 @@ import torch.nn as nn
 from torch.nn import functional as F
 from data.vocab import vocab
 from data.dataclass import TextDataset
-from hyperparams import n_embed, block_size, device
+from hyperparams import n_embed, block_size, device, n_head, n_layer, dropout
 
 # Create vocabulary
 vocab_size = len(vocab)
@@ -19,6 +19,11 @@ class Head(nn.Module):
         # This is typically used to register a buffer that should not to be considered a model parameter
         # Buffers, by default, are persistent and will be saved alongside parameters.
         self.register_buffer('tril', torch.tril(torch.ones(block_size, block_size)))
+        # drop out
+        #   - at train time: randomly drop neuron and train without them (change every forward backward pass) --> train on an ensemble of sub networks
+        #   - at test time: everything is fully enabled --> all of sub-network are merged into a single one
+        self.dropout = nn.Dropout(dropout)
+        
         
     def forward(self, x):
         B, T, C = x.shape
@@ -30,7 +35,8 @@ class Head(nn.Module):
         wei = q @ k.transpose(-2, -1) * C**-0.5 # (B,T,C) @ (B,C,T) = (B,T,T)
         wei = wei.masked_fill(self.tril[:T, :T] == 0, float('-inf')) # (B,T,T)
         wei = F.softmax(wei, dim=-1) # (B,T,T)
-        
+        # Drop out the affinity to randomly prevent some of the node to communicate
+        wei = self.dropout(wei)
         # perform weighted aggregation of the values
         v = self.value(x) # (B,T,C)
         out = wei @ v # (B,T,T) @ (B,T,C) = (B,T,C)
@@ -43,11 +49,13 @@ class MultiHeadAttention(nn.Module):
         self.heads = nn.ModuleList([Head(head_size) for _ in range(num_heads)])
         # Projection layer going back to the residual pathway? the Wo in the paper?
         self.proj = nn.Linear(n_embed, n_embed)
+        self.dropout = nn.Dropout(dropout)
         
     def forward(self, x):
         # Run all heads parallel and concat all outputs over the channel (C) dimension
         out = torch.cat([head(x) for head in self.heads], dim=-1)
         out = self.proj(out)
+        out = self.dropout(out)
         return out
     
 class FeedForward(nn.Module):
@@ -59,6 +67,7 @@ class FeedForward(nn.Module):
             nn.Linear(n_embed, 4*n_embed),
             nn.ReLU(),
             nn.Linear(4*n_embed, n_embed), # projection? (same as in multihead)
+            nn.Dropout(dropout)
         )
         
     def forward(self, x):
@@ -70,14 +79,20 @@ class Block(nn.Module):
     def __init__(self, n_embed, n_head):
         super().__init__()
         head_size = n_embed // n_head
+        self.ln1 = nn.LayerNorm(n_embed)
         self.sa = MultiHeadAttention(n_head, head_size)
+        self.ln2 = nn.LayerNorm(n_embed)
+        self.ffwd = FeedForward(n_embed)
         # The tokens look at each other but does not have time to think on what they found from others
         # This feedforward is the per token level --> they already communicate and gather data in the self attention layer, now they need to think on that data individually
         # That's the purpose of the feed forward layer
-        self.ffwd = FeedForward(n_embed)
     def forward(self, x):
+        # Apply layernorm first (pre-norm)
+        x = self.ln1(x)
         # Apply multi-head self-attention with residual connection
         x = x + self.sa(x) # (B,T,C)
+        # Apply layernorm first (pre-norm)
+        x = self.ln2(x)
         # Apply feed forward with residual connection
         x = x + self.ffwd(x) # 
         return x
@@ -88,13 +103,16 @@ class TransformerZeroModel(nn.Module):
         super().__init__()
         self.token_embedding_table = nn.Embedding(vocab_size, n_embed)
         self.position_embedding_table = nn.Embedding(block_size, n_embed)
-        self.blocks = nn.Sequential(
-            Block(n_embed, n_head=4),
-            Block(n_embed, n_head=4),
-            Block(n_embed, n_head=4),
-        )
-        self.sa_head = MultiHeadAttention(4, n_embed//4)
-        self.ffwd = FeedForward(n_embed)
+        # self.blocks = nn.Sequential(
+        #     Block(n_embed, n_head=4),
+        #     Block(n_embed, n_head=4),
+        #     Block(n_embed, n_head=4),
+        #     # this is new
+        #     nn.LayerNorm(n_embed)
+        # )
+        self.blocks = nn.Sequential(*[Block(n_embed, n_head=n_head) for _ in range(n_layer)])
+        # this is new
+        self.ln_f = nn.LayerNorm(n_embed)
         self.lm_head = nn.Linear(n_embed, vocab_size)
 
     def forward(self, idx):
@@ -105,6 +123,7 @@ class TransformerZeroModel(nn.Module):
         # Broadcasting (B,T,C) + (T,C)
         x = token_embed + position_embed # (B,T,C)
         x = self.blocks(x) # (B,T,C)
+        x = self.ln_f(x) # (B,T,C)
         logits = self.lm_head(x) # (B,T,vocab_size)
         B, T, C = logits.shape            
         # we have to do this because cross_entropy expect (B,C,T), not (B,T,C)
