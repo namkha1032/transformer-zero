@@ -44,4 +44,10 @@ if __name__ == "__main__":
         train_loop(train_dataloader, model, loss_fn, optimizer)
         test_loop(test_dataloader, model, loss_fn)
     print("Done!")
+    
+    # save model
+
+    torch.save(model.state_dict(), "zero.pth")
+    print("Saved PyTorch Model State to zero.pth")
+
         

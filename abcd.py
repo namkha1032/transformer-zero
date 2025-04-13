@@ -1,53 +1,23 @@
-import torch
-from torch.utils.data import Dataset
-from torch.utils.data import DataLoader
+# query vector: what do I look for
+# key vector: what do I contain
+# --> affinity between tokens =  dot product between queries and keys
+# query (B, T, 16)
+# key (B, T, 16)
+# weight aggregation now is data dependent
+# before: wei is the same for all batches
+# after: wei is different for each batch bc each batch has different tokens
+# wei = q @ k.transpose(-2, -1) # (B, T, 16) @ (B, 16, T) ---> (B, T, T)
 
-class ShakespeareDataset(Dataset):
-    def __init__(self, file_path, seq_length=8):
-        # Read the text file
-        with open(file_path, 'r', encoding='utf-8') as f:
-            text = f.read()
-        
-        # Get unique characters
-        self.chars = sorted(list(set(text)))
-        self.vocab_size = len(self.chars)
-        
-        # Create character-to-index and index-to-character mappings
-        self.char_to_idx = {ch: i for i, ch in enumerate(self.chars)}
-        self.idx_to_char = {i: ch for i, ch in enumerate(self.chars)}
-        
-        # Convert text to list of indices
-        self.data = [self.char_to_idx[ch] for ch in text]
-        
-        # Sequence length (context size)
-        self.seq_length = seq_length
-
-    def __len__(self):
-        # Number of possible sequences
-        return len(self.data) - self.seq_length
-
-    def __getitem__(self, idx):
-        # Get a sequence of indices (input) and the next character indices (target)
-        input_seq = self.data[idx:idx + self.seq_length]
-        target_seq = self.data[idx + 1:idx + self.seq_length + 1]
-        
-        return (
-            torch.tensor(input_seq, dtype=torch.long),
-            torch.tensor(target_seq, dtype=torch.long)
-        )
-
-
-# Initialize dataset
-dataset = ShakespeareDataset('input.txt', seq_length=8)
-
-# Create DataLoader
-batch_size = 32
-dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
-print(len(dataset))
-# Test the DataLoader
-for input_batch, target_batch in dataloader:
-    print(f"Input batch shape: {input_batch.shape}")  # [batch_size, seq_length]
-    print(f"Target batch shape: {target_batch.shape}")  # [batch_size, seq_length]
-    print(f"Input batch shape: {input_batch}")  # [batch_size, seq_length]
-    print(f"Target batch shape: {target_batch}")  # [batch_size, seq_length]
-    break  # Just print one batch for verification
+# out = wei @ v
+# Example: the 8th token knows what content it has, and what position it's in
+# Base on that: the 8th token create a query: "I'm a vowel at 8th position, I'm looking for any consonant at positions up to four"
+# All the nodes (tokens) emit the keys
+# One of the channels could be "I'm a consonant at position up to 4" --> this key will have a high number in that specific channel
+# ==> that's how the query and the key, when they dot product they can find each other and create high affinity
+# through mask, we ensure that tokens do not look at the future
+# through softmax, we can aggregate a lot of its information in to that position
+# x is privaste information of each token
+# - query: what do I look for
+# - key: what do I have
+# - value: if you find me interesting (high query*key), this is what I will communicate to you
+# scaled attention is used to control the variance at initialization, so when we apply softmax, the output will stay diffuse and not lean towards highest number

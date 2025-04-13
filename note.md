@@ -24,3 +24,17 @@
 ## torch.multinomial
 
 ## xem lai xem tai sao phai dung layer norm
+
+## xem xem co can phai train position embedding ko
+
+## thu dung pytorch multiheadattention
+
+## kiem tra xem neu chi dung 2 trong 3 mon query, key, value thi the nao
+
+## mask chi ap dung cho decoder. Kiem tra lai xem khi test thi mask co ap dung ko
+
+## kiem tra xem dong embedding co phai la learnable parameter ko
+
+## xem xet reshape BTC to BCT https://grok.com/share/bGVnYWN5_a7023719-47c7-43bf-a58f-b9a91b9d9dbe --> phai chinh lai code trong generate
+
+## chinh lai cipher, stoi, itos
