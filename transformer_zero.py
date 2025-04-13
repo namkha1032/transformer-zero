@@ -26,6 +26,7 @@ class Head(nn.Module):
         q = self.query(x) # (B,T,C)
         
         # compute attention scores ("affinities")
+        # scaled dot-product attention
         wei = q @ k.transpose(-2, -1) * C**-0.5 # (B,T,C) @ (B,C,T) = (B,T,T)
         wei = wei.masked_fill(self.tril[:T, :T] == 0, float('-inf')) # (B,T,T)
         wei = F.softmax(wei, dim=-1) # (B,T,T)
@@ -35,12 +36,40 @@ class Head(nn.Module):
         out = wei @ v # (B,T,T) @ (B,T,C) = (B,T,C)
         return out
 
+class MultiHeadAttention(nn.Module):
+    """multiple heads of self-attention in parallel"""
+    def __init__(self, num_heads, head_size):
+        super().__init__()
+        self.heads = nn.ModuleList([Head(head_size) for _ in range(num_heads)])
+
+    def forward(self, x):
+        # Run all heads parallel and concat all outputs over the channel (C) dimension
+        return torch.cat([head(x) for head in self.heads], dim=-1)
+    
+class FeedForward(nn.Module):
+    """simple linear layer foloowed by a non-linearity"""
+    def __init__(self, n_embed):
+        super().__init__()
+        self.net = nn.Sequential(
+            nn.Linear(n_embed, n_embed),
+            nn.ReLU()
+        )
+        
+    def forward(self, x):
+        return self.net(x)
+
+    
+
 class TransformerZeroModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.token_embedding_table = nn.Embedding(vocab_size, n_embed)
         self.position_embedding_table = nn.Embedding(block_size, n_embed)
-        self.sa_head = Head(n_embed)
+        self.sa_head = MultiHeadAttention(4, n_embed//4)
+        # The tokens look at each other but does not have time to think on what they found from others
+        # This feedforward is the per token level --> they already communicate and gather data in the self attention layer, now they need to think on that data individually
+        # That's the purpose of the feed forward layer
+        self.ffwd = FeedForward(n_embed)
         self.lm_head = nn.Linear(n_embed, vocab_size)
 
     def forward(self, idx):
@@ -52,6 +81,8 @@ class TransformerZeroModel(nn.Module):
         x = token_embed + position_embed # (B,T,C)
         # Apply one head of self-attention (B,T,C)
         x = self.sa_head(x)
+        # Apply feed forward
+        x = self.ffwd(x)
         # logits: (B,T,vocab_size)
         logits = self.lm_head(x)
         B, T, C = logits.shape            

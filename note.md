@@ -38,3 +38,7 @@
 ## xem xet reshape BTC to BCT https://grok.com/share/bGVnYWN5_a7023719-47c7-43bf-a58f-b9a91b9d9dbe --> phai chinh lai code trong generate
 
 ## chinh lai cipher, stoi, itos
+
+## thu dung ModuleList de parallel query, key, value
+
+## da co ffwd roi, sao lai can lm_head nua
