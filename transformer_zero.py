@@ -41,34 +41,59 @@ class MultiHeadAttention(nn.Module):
     def __init__(self, num_heads, head_size):
         super().__init__()
         self.heads = nn.ModuleList([Head(head_size) for _ in range(num_heads)])
-
+        # Projection layer going back to the residual pathway? the Wo in the paper?
+        self.proj = nn.Linear(n_embed, n_embed)
+        
     def forward(self, x):
         # Run all heads parallel and concat all outputs over the channel (C) dimension
-        return torch.cat([head(x) for head in self.heads], dim=-1)
+        out = torch.cat([head(x) for head in self.heads], dim=-1)
+        out = self.proj(out)
+        return out
     
 class FeedForward(nn.Module):
     """simple linear layer foloowed by a non-linearity"""
     def __init__(self, n_embed):
         super().__init__()
         self.net = nn.Sequential(
-            nn.Linear(n_embed, n_embed),
-            nn.ReLU()
+            # Growing this layer in the residual block on the side of the residual pathway
+            nn.Linear(n_embed, 4*n_embed),
+            nn.ReLU(),
+            nn.Linear(4*n_embed, n_embed), # projection? (same as in multihead)
         )
         
     def forward(self, x):
         return self.net(x)
 
-    
+
+class Block(nn.Module):
+    """Transformer blockL: communication (sa) followed by computation (ffwd)"""
+    def __init__(self, n_embed, n_head):
+        super().__init__()
+        head_size = n_embed // n_head
+        self.sa = MultiHeadAttention(n_head, head_size)
+        # The tokens look at each other but does not have time to think on what they found from others
+        # This feedforward is the per token level --> they already communicate and gather data in the self attention layer, now they need to think on that data individually
+        # That's the purpose of the feed forward layer
+        self.ffwd = FeedForward(n_embed)
+    def forward(self, x):
+        # Apply multi-head self-attention with residual connection
+        x = x + self.sa(x) # (B,T,C)
+        # Apply feed forward with residual connection
+        x = x + self.ffwd(x) # 
+        return x
+
 
 class TransformerZeroModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.token_embedding_table = nn.Embedding(vocab_size, n_embed)
         self.position_embedding_table = nn.Embedding(block_size, n_embed)
+        self.blocks = nn.Sequential(
+            Block(n_embed, n_head=4),
+            Block(n_embed, n_head=4),
+            Block(n_embed, n_head=4),
+        )
         self.sa_head = MultiHeadAttention(4, n_embed//4)
-        # The tokens look at each other but does not have time to think on what they found from others
-        # This feedforward is the per token level --> they already communicate and gather data in the self attention layer, now they need to think on that data individually
-        # That's the purpose of the feed forward layer
         self.ffwd = FeedForward(n_embed)
         self.lm_head = nn.Linear(n_embed, vocab_size)
 
@@ -79,12 +104,8 @@ class TransformerZeroModel(nn.Module):
         position_embed = self.position_embedding_table(torch.arange(T, device=device)) # (T,C)
         # Broadcasting (B,T,C) + (T,C)
         x = token_embed + position_embed # (B,T,C)
-        # Apply one head of self-attention (B,T,C)
-        x = self.sa_head(x)
-        # Apply feed forward
-        x = self.ffwd(x)
-        # logits: (B,T,vocab_size)
-        logits = self.lm_head(x)
+        x = self.blocks(x) # (B,T,C)
+        logits = self.lm_head(x) # (B,T,vocab_size)
         B, T, C = logits.shape            
         # we have to do this because cross_entropy expect (B,C,T), not (B,T,C)
         logits = logits.view(B*T, C)

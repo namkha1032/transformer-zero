@@ -42,3 +42,9 @@
 ## thu dung ModuleList de parallel query, key, value
 
 ## da co ffwd roi, sao lai can lm_head nua
+
+## thu gom tat ca vao nn.Sequential
+
+## xem lai clip giai thich ve residual connection (tam 1:28:00)
+
+## Xem lai cai projection (Wo)
