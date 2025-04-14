@@ -152,7 +152,8 @@ class TransformerZeroModel(nn.Module):
             # apply softmax to get probabilities
             probs = F.softmax(logits, dim=-1) # (B,C)
             # sample from the distribution
-            idx_next = torch.multinomial(probs, num_samples=1) # (B,1)
+            # idx_next = torch.multinomial(probs, num_samples=1) # (B,1), random
+            idx_next = probs.argmax(dim=-1, keepdim=True) # (B,1), no random
             # append sampled index to the running sequence
             idx = torch.cat((idx, idx_next), dim=1) # (B,T+1)
         return idx

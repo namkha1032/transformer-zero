@@ -1,13 +1,24 @@
 import torch
 from transformer_zero import TransformerZeroModel
 from hyperparams import device
-from cipher import decode
-from vocab import itos
+from cipher import decode, encode
+from vocab import itos, stoi
 
 model = TransformerZeroModel().to(device)
-model.load_state_dict(torch.load("zero.pth"))
+model.load_state_dict(torch.load("zero.pth", map_location=device))
 model.eval()
 
+# # count 
+# def count_learnable_params(model):
+#     return sum(p.numel() for p in model.parameters() if p.requires_grad)
+# count = count_learnable_params(model)
+# pass
+
+
+
 # generate from the model
-context = torch.zeros((1, 1), dtype=torch.long, device=device)
-print(decode(model.generate(context, max_new_tokens=500)[0].tolist(), itos))
+init_text = "We are accounted poor citizens"
+init_embed = torch.tensor([encode(init_text, stoi)], dtype=torch.long, device=device)
+# abc = torch.tensor([[0,2,5,4,3]]).to(device)
+# context = torch.zeros((1, 1), dtype=torch.long, device=device)
+print(decode(model.generate(init_embed, max_new_tokens=500)[0].tolist(), itos))
