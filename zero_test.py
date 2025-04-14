@@ -1,8 +1,8 @@
 import torch
 from transformer_zero import TransformerZeroModel
 from hyperparams import device
-from functions.cipher import decode
-from data.vocab import itos
+from cipher import decode
+from vocab import itos
 
 model = TransformerZeroModel().to(device)
 model.load_state_dict(torch.load("zero.pth"))

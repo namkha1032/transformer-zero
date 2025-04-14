@@ -1,12 +1,11 @@
 import torch
 import torch.nn as nn
 from torch.nn import functional as F
-from data.vocab import vocab
-from data.dataclass import TextDataset
 from hyperparams import n_embed, block_size, device, n_head, n_layer, dropout
+from vocab import vocab_size
 
 # Create vocabulary
-vocab_size = len(vocab)
+# vocab_size = len(vocab)
 
 
 class Head(nn.Module):
@@ -27,12 +26,12 @@ class Head(nn.Module):
         
     def forward(self, x):
         B, T, C = x.shape
-        k = self.key(x) # (B,T,C)
-        q = self.query(x) # (B,T,C)
+        k = self.key(x) # (B,T,hs)
+        q = self.query(x) # (B,T,hs)
         
         # compute attention scores ("affinities")
         # scaled dot-product attention
-        wei = q @ k.transpose(-2, -1) * C**-0.5 # (B,T,C) @ (B,C,T) = (B,T,T)
+        wei = q @ k.transpose(-2, -1) * k.shape[-1]**-0.5 # (B,T,hs) @ (B,hs,T) = (B,T,T)
         wei = wei.masked_fill(self.tril[:T, :T] == 0, float('-inf')) # (B,T,T)
         wei = F.softmax(wei, dim=-1) # (B,T,T)
         # Drop out the affinity to randomly prevent some of the node to communicate
@@ -43,12 +42,11 @@ class Head(nn.Module):
         return out
 
 class MultiHeadAttention(nn.Module):
-    """multiple heads of self-attention in parallel"""
     def __init__(self, num_heads, head_size):
         super().__init__()
         self.heads = nn.ModuleList([Head(head_size) for _ in range(num_heads)])
         # Projection layer going back to the residual pathway? the Wo in the paper?
-        self.proj = nn.Linear(n_embed, n_embed)
+        self.proj = nn.Linear(head_size*num_heads, n_embed)
         self.dropout = nn.Dropout(dropout)
         
     def forward(self, x):
@@ -114,11 +112,20 @@ class TransformerZeroModel(nn.Module):
         # this is new
         self.ln_f = nn.LayerNorm(n_embed)
         self.lm_head = nn.Linear(n_embed, vocab_size)
+        self.apply(self._init_weights)
+
+    def _init_weights(self, module):
+        if isinstance(module, nn.Linear):
+            torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
+            if module.bias is not None:
+                torch.nn.init.zeros_(module.bias)
+        elif isinstance(module, nn.Embedding):
+            torch.nn.init.normal_(module.weight, mean=0.0, std=0.02)
 
     def forward(self, idx):
         B, T = idx.shape
         # idx, targets: (B,T)
-        token_embed = self.token_embedding_table(idx) # (B,T,C) --> C is n_embed (embed dimension)
+        token_embed = self.token_embedding_table(idx) # (B,T,C)
         position_embed = self.position_embedding_table(torch.arange(T, device=device)) # (T,C)
         # Broadcasting (B,T,C) + (T,C)
         x = token_embed + position_embed # (B,T,C)
@@ -140,7 +147,7 @@ class TransformerZeroModel(nn.Module):
             logits = self(idx_cond)
             # focus only on the last time step
             BT, C = logits.shape
-            logits = logits[-1, :].reshape(1, C) # becomes (1,65)
+            logits = logits[-1, :].reshape(1, C)
             # logits = torch.reshape(logits, (65,))
             # apply softmax to get probabilities
             probs = F.softmax(logits, dim=-1) # (B,C)
