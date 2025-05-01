@@ -1,19 +1,19 @@
 import torch
-from transformer_zero import TransformerZeroModel
+
+from data.vocab import itos, stoi
+from func.cipher import decode, encode
 from hyperparams import device
-from cipher import decode, encode
-from vocab import itos, stoi
+from transformer_zero import TransformerZeroModel
 
 model = TransformerZeroModel().to(device)
 model.load_state_dict(torch.load("zero.pth", map_location=device))
 model.eval()
 
-# # count 
+# # count
 # def count_learnable_params(model):
 #     return sum(p.numel() for p in model.parameters() if p.requires_grad)
 # count = count_learnable_params(model)
 # pass
-
 
 
 # generate from the model

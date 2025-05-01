@@ -1,11 +1,13 @@
 import torch
-from torch.utils.data import Dataset, DataLoader
+from torch.utils.data import DataLoader, Dataset
+
+from func.cipher import encode
 from hyperparams import batch_size, block_size, device
-from cipher import encode
+
 
 class TextDataset(Dataset):
     def __init__(self, data, transform=None, target_transform=None):
-        self.data:list = torch.tensor(data).to(device)
+        self.data: list = torch.tensor(data).to(device)
         self.transform = transform
         self.target_transform = target_transform
 
@@ -14,17 +16,16 @@ class TextDataset(Dataset):
         # return len(self.data) - block_size
         return len(self.data) // block_size
 
-    
     def __getitem__(self, idx):
-        block_idx = idx*block_size
-        x = self.data[block_idx:block_idx+block_size].to(device)
-        y = self.data[block_idx+1:block_idx+block_size+1].to(device)
+        block_idx = idx * block_size
+        x = self.data[block_idx : block_idx + block_size].to(device)
+        y = self.data[block_idx + 1 : block_idx + block_size + 1].to(device)
         # x, y = x.to(device), y.to(device)
         return x, y
-    
-    
+
+
 if __name__ == "__main__":
-    dataset = TextDataset('./input.txt')
+    dataset = TextDataset("./input.txt")
     dataloader = DataLoader(dataset, batch_size=batch_size, shuffle=True)
     print(len(dataset))
     # Test the DataLoader
