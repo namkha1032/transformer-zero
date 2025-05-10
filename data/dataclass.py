@@ -2,7 +2,7 @@ import torch
 from torch.utils.data import DataLoader, Dataset
 
 from func.cipher import encode
-from hyperparams import batch_size, block_size, device
+from hyperparams import batch_size, context_size, device
 
 
 class TextDataset(Dataset):
@@ -13,13 +13,13 @@ class TextDataset(Dataset):
 
     def __len__(self):
         # Number of possible sequences
-        # return len(self.data) - block_size
-        return len(self.data) // block_size
+        # return len(self.data) - context_size
+        return len(self.data) // context_size
 
     def __getitem__(self, idx):
-        block_idx = idx * block_size
-        x = self.data[block_idx : block_idx + block_size].to(device)
-        y = self.data[block_idx + 1 : block_idx + block_size + 1].to(device)
+        block_idx = idx * context_size
+        x = self.data[block_idx : block_idx + context_size].to(device)
+        y = self.data[block_idx + 1 : block_idx + context_size + 1].to(device)
         # x, y = x.to(device), y.to(device)
         return x, y
 

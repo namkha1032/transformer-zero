@@ -3,7 +3,7 @@ import torch.nn as nn
 from torch.nn import functional as F
 
 from data.vocab import vocab_size
-from hyperparams import block_size, device, dropout, n_embed, n_head, n_layer
+from hyperparams import context_size, device, dropout, n_embed, n_head, n_layer
 
 # Create vocabulary
 # vocab_size = len(vocab)
@@ -19,7 +19,7 @@ class Head(nn.Module):
         self.value = nn.Linear(n_embed, head_size, bias=False)
         # This is typically used to register a buffer that should not to be considered a model parameter
         # Buffers, by default, are persistent and will be saved alongside parameters.
-        self.register_buffer("tril", torch.tril(torch.ones(block_size, block_size)))
+        self.register_buffer("tril", torch.tril(torch.ones(context_size, context_size)))
         # drop out
         #   - at train time: randomly drop neuron and train without them (change every forward backward pass) --> train on an ensemble of sub networks
         #   - at test time: everything is fully enabled --> all of sub-network are merged into a single one
@@ -108,14 +108,7 @@ class TransformerZeroModel(nn.Module):
     def __init__(self):
         super().__init__()
         self.token_embedding_table = nn.Embedding(vocab_size, n_embed)
-        self.position_embedding_table = nn.Embedding(block_size, n_embed)
-        # self.blocks = nn.Sequential(
-        #     Block(n_embed, n_head=4),
-        #     Block(n_embed, n_head=4),
-        #     Block(n_embed, n_head=4),
-        #     # this is new
-        #     nn.LayerNorm(n_embed)
-        # )
+        self.position_embedding_table = nn.Embedding(context_size, n_embed)
         self.blocks = nn.Sequential(
             *[Block(n_embed, n_head=n_head) for _ in range(n_layer)]
         )
@@ -152,9 +145,9 @@ class TransformerZeroModel(nn.Module):
     def generate(self, idx, max_new_tokens):
         # idx is (B,T) array of indices in the current context
         for _ in range(max_new_tokens):
-            # We have to make sure idx is never more than block_size, otherwise, position_embedding_table will run out of scope
-            # That's why we crop idx to the last block_size tokens
-            idx_cond = idx[:, -block_size:]
+            # We have to make sure idx is never more than context_size, otherwise, position_embedding_table will run out of scope
+            # That's why we crop idx to the last context_size tokens
+            idx_cond = idx[:, -context_size:]
             # get the predictions
             logits = self(idx_cond)
             # focus only on the last time step
