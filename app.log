@@ -1,0 +1,7 @@
+2025-05-11 05:48:52,025 | INFO | __main__ : 51768
+2025-05-11 05:48:53,046 | INFO | __main__ : Loss: 0
+2025-05-11 05:48:55,047 | INFO | __main__ : Loss: 2
+2025-05-11 05:48:57,048 | INFO | __main__ : Loss: 4
+2025-05-11 05:48:59,050 | INFO | __main__ : Loss: 6
+2025-05-11 05:49:01,051 | INFO | __main__ : Loss: 8
+2025-05-11 05:49:03,052 | ERROR | __main__ : [Errno 2] No such file or directory: 'abc.txt'

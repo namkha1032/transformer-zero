@@ -17,9 +17,9 @@ class TextDataset(Dataset):
         return len(self.data) // context_size
 
     def __getitem__(self, idx):
-        block_idx = idx * context_size
-        x = self.data[block_idx : block_idx + context_size].to(device)
-        y = self.data[block_idx + 1 : block_idx + context_size + 1].to(device)
+        context_idx = idx * context_size
+        x = self.data[context_idx : context_idx + context_size].to(device)
+        y = self.data[context_idx + 1 : context_idx + 1 + context_size].to(device)
         # x, y = x.to(device), y.to(device)
         return x, y
 

@@ -1,5 +1,6 @@
 from hyperparams import batch_size
 import torch
+from tqdm import tqdm
 
 def reshape(pred, y):
     BT, C = pred.shape
@@ -12,7 +13,8 @@ def train_loop(dataloader, model, loss_fn, optimizer):
     # Set the model to training mode - important for batch normalization and dropout layers
     # Unnecessary in this situation but added for best practices
     model.train()
-    for batch, (X, y) in enumerate(dataloader):
+    pbar = tqdm(dataloader)
+    for batch, (X, y) in enumerate(pbar):
         # Compute prediction and loss
         pred = model(X)
         # namkha: convert loss dim from (B, T, C) to (B*T, C)
@@ -24,9 +26,11 @@ def train_loop(dataloader, model, loss_fn, optimizer):
         optimizer.step()
         optimizer.zero_grad()
 
-        if batch % 100 == 0:
-            loss, current = loss.item(), batch * batch_size + len(X)
-            print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
+        # print
+        pbar.set_description(f"Loss: {loss.item():.4f}")
+        # if batch % 100 == 0:
+        #     loss, current = loss.item(), batch * batch_size + len(X)
+        #     print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
 
 def test_loop(dataloader, model, loss_fn):
     # Set the model to evaluation mode - important for batch normalization and dropout layers

@@ -1,14 +1,31 @@
 from time import sleep
-
 from tqdm import tqdm
 
-# pbar = tqdm([i for i in range(100)])
-# for idx, char in enumerate(pbar):
-#     sleep(0.25)
-#     if idx % 10 == 0:
-#         pbar.set_description("Processing %s" % char)
+import os
+
+import logging
+
+# Configure logging
+logging.basicConfig(
+    filename='app.log',           # Log file name
+    filemode='w',                 # Append mode ('w' to overwrite)
+    level=logging.NOTSET,          # Log level (DEBUG, INFO, WARNING, ERROR, CRITICAL)
+    format='%(asctime)s | %(levelname)s | %(name)s : %(message)s',  # Log format
+    encoding='utf-8'
+)
+logger = logging.getLogger(__name__)
+logger.info(os.getpid())
         
-with tqdm(total=100) as pbar:
-    for i in range(10):
-        sleep(0.1)
-        pbar.update(10)
+if __name__=="__main__":
+    try:
+        pbar = tqdm([i for i in range(100)])
+        for idx, char in enumerate(pbar):
+            sleep(1)
+            pbar.set_description("Processing %s" % char)
+            if idx % 10 == 0 and idx > 0:
+                with open('abc.txt', 'r') as file:
+                    pass
+            if idx % 2 == 0:
+                logger.info(f"Loss: {idx}")
+    except Exception as e:
+        logger.error(e)
