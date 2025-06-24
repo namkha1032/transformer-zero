@@ -112,7 +112,7 @@ class TransformerZeroModel(nn.Module):
         self.blocks = nn.Sequential(
             *[Block(n_embed, n_head=n_head) for _ in range(n_layer)]
         )
-        # this is new
+        # this new LayerNorm is added in the GPT2 model
         self.ln_f = nn.LayerNorm(n_embed)
         self.lm_head = nn.Linear(n_embed, vocab_size)
         self.apply(self._init_weights)

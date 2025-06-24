@@ -1,0 +1,3 @@
+- use fix positional encoding instead of training weights
+- check xem lm_head cua transformer_zero co bias ko (print weight ra)
+- try replace causal self attention with more simple multihead attention
