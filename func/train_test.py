@@ -17,20 +17,22 @@ def train_loop(dataloader, model, loss_fn, optimizer):
     for batch, (X, y) in enumerate(pbar):
         # Compute prediction and loss
         pred = model(X)
+        # Convert prep.shape from (B, T, V) to (B, V, T)
+        pred = torch.transpose(pred, 1, 2)
         # namkha: convert loss dim from (B, T, C) to (B*T, C)
-        new_y = reshape(pred, y)
-        loss = loss_fn(pred, new_y)
+        # new_y = reshape(pred, y)
+        loss = loss_fn(pred, y)
 
         # Backpropagation
+        optimizer.zero_grad()
         loss.backward()
         optimizer.step()
-        optimizer.zero_grad()
 
         # print
         pbar.set_description(f"Loss: {loss.item():.4f}")
-        # if batch % 100 == 0:
-        #     loss, current = loss.item(), batch * batch_size + len(X)
-        #     print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
+        if batch % 10 == 0:
+            loss, current = loss.item(), batch * batch_size + len(X)
+            print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
 
 def test_loop(dataloader, model, loss_fn):
     # Set the model to evaluation mode - important for batch normalization and dropout layers
@@ -46,11 +48,12 @@ def test_loop(dataloader, model, loss_fn):
     with torch.no_grad():
         for X, y in dataloader:
             pred = model(X)
-            new_y = reshape(pred, y)
-            test_loss += loss_fn(pred, new_y).item()
-            correct += (pred.argmax(1) == new_y).type(torch.int).sum().item()
-            sample_size += new_y.shape[0]
+            # Convert prep.shape from (B, T, V) to (B, V, T)
+            pred = torch.transpose(pred, 1, 2)
+            test_loss += loss_fn(pred, y).item()
+            correct += (pred.argmax(1) == y).type(torch.int).sum().item()
+            sample_size += y.shape[0]*y.shape[1]
 
     test_loss /= num_batches
     correct /= sample_size
-    print(f"Test Error: \n Accuracy: {(100*correct):>0.1f}%, Avg loss: {test_loss:>8f} \n")
+    print(f"Test Error: Accuracy: {(100*correct):>0.1f}%, Avg loss: {test_loss:>8f}")

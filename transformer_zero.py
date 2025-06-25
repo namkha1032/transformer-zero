@@ -137,12 +137,12 @@ class TransformerZeroModel(nn.Module):
         x = self.blocks(x)  # (B,T,C)
         x = self.ln_f(x)  # (B,T,C)
         logits = self.lm_head(x)  # (B,T,vocab_size)
-        B, T, C = logits.shape
-        # we have to do this because cross_entropy expect (B,C,T), not (B,T,C)
-        logits = logits.view(B * T, C)
+        B, T, V = logits.shape
+        # we have to do this because cross_entropy expect (B,V,T), not (B,T,V)
+        # logits = logits.view(B * T, V)
         return logits
 
-    def generate(self, idx, max_new_tokens):
+    def generate(self, idx, max_new_tokens, random=False):
         # idx is (B,T) array of indices in the current context
         for _ in range(max_new_tokens):
             # We have to make sure idx is never more than context_size, otherwise, position_embedding_table will run out of scope
@@ -151,14 +151,18 @@ class TransformerZeroModel(nn.Module):
             # get the predictions
             logits = self(idx_cond)
             # focus only on the last time step
-            BT, C = logits.shape
-            logits = logits[-1, :].reshape(1, C)
+            # BT, C = logits.shape
+            # logits = logits[-1, :].reshape(1, C)
+            logits = logits[:, -1, :]
             # logits = torch.reshape(logits, (65,))
             # apply softmax to get probabilities
             probs = F.softmax(logits, dim=-1)  # (B,C)
             # sample from the distribution
-            # idx_next = torch.multinomial(probs, num_samples=1) # (B,1), random
-            idx_next = probs.argmax(dim=-1, keepdim=True)  # (B,1), no random
+            idx_next = None
+            if random:
+                idx_next = torch.multinomial(probs, num_samples=1) # (B,1), random
+            else:
+                idx_next = probs.argmax(dim=-1, keepdim=True)  # (B,1), no random
             # append sampled index to the running sequence
             idx = torch.cat((idx, idx_next), dim=1)  # (B,T+1)
         return idx

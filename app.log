@@ -1,7 +1,1006 @@
-2025-05-11 05:48:52,025 | INFO | __main__ : 51768
-2025-05-11 05:48:53,046 | INFO | __main__ : Loss: 0
-2025-05-11 05:48:55,047 | INFO | __main__ : Loss: 2
-2025-05-11 05:48:57,048 | INFO | __main__ : Loss: 4
-2025-05-11 05:48:59,050 | INFO | __main__ : Loss: 6
-2025-05-11 05:49:01,051 | INFO | __main__ : Loss: 8
-2025-05-11 05:49:03,052 | ERROR | __main__ : [Errno 2] No such file or directory: 'abc.txt'
+PID   | Time                    | Level   | Function   |               File:No | Message
+------+-------------------------+---------+------------+-----------------------+-----------------------------------------
+27628 | 2025-06-25 08:05:02,096 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 1
+------+-------------------------+---------+------------+-----------------------+-----------------------------------------
+27628 | 2025-06-25 08:05:02,430 | 🔵 info | train_loop | func/train_test.py:35 | loss: 4.259688  [   64/ 4357]
+27628 | 2025-06-25 08:05:03,650 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.959693  [  704/ 4357]
+27628 | 2025-06-25 08:05:04,867 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.685712  [ 1344/ 4357]
+27628 | 2025-06-25 08:05:06,083 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.605777  [ 1984/ 4357]
+27628 | 2025-06-25 08:05:07,299 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.561384  [ 2624/ 4357]
+27628 | 2025-06-25 08:05:08,515 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.533051  [ 3264/ 4357]
+27628 | 2025-06-25 08:05:09,732 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.545877  [ 3904/ 4357]
+27628 | 2025-06-25 08:05:10,971 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 26.1%, Avg loss: 2.527790
+27628 | 2025-06-25 08:05:10,971 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 2
+-------------------------------
+27628 | 2025-06-25 08:05:11,094 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.554783  [   64/ 4357]
+27628 | 2025-06-25 08:05:12,311 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.577801  [  704/ 4357]
+27628 | 2025-06-25 08:05:13,528 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.536803  [ 1344/ 4357]
+27628 | 2025-06-25 08:05:14,745 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.533185  [ 1984/ 4357]
+27628 | 2025-06-25 08:05:15,964 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.494078  [ 2624/ 4357]
+27628 | 2025-06-25 08:05:17,183 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.490519  [ 3264/ 4357]
+27628 | 2025-06-25 08:05:18,403 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.507544  [ 3904/ 4357]
+27628 | 2025-06-25 08:05:19,641 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 27.0%, Avg loss: 2.499551
+27628 | 2025-06-25 08:05:19,642 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 3
+-------------------------------
+27628 | 2025-06-25 08:05:19,765 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.518289  [   64/ 4357]
+27628 | 2025-06-25 08:05:20,985 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.517461  [  704/ 4357]
+27628 | 2025-06-25 08:05:22,205 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.500866  [ 1344/ 4357]
+27628 | 2025-06-25 08:05:23,426 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.495494  [ 1984/ 4357]
+27628 | 2025-06-25 08:05:24,646 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.443436  [ 2624/ 4357]
+27628 | 2025-06-25 08:05:25,866 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.451010  [ 3264/ 4357]
+27628 | 2025-06-25 08:05:27,087 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.462459  [ 3904/ 4357]
+27628 | 2025-06-25 08:05:28,327 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 28.3%, Avg loss: 2.439214
+27628 | 2025-06-25 08:05:28,327 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 4
+-------------------------------
+27628 | 2025-06-25 08:05:28,451 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.477955  [   64/ 4357]
+27628 | 2025-06-25 08:05:29,671 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.480265  [  704/ 4357]
+27628 | 2025-06-25 08:05:30,892 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.450725  [ 1344/ 4357]
+27628 | 2025-06-25 08:05:32,113 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.434556  [ 1984/ 4357]
+27628 | 2025-06-25 08:05:33,334 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.363368  [ 2624/ 4357]
+27628 | 2025-06-25 08:05:34,554 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.365282  [ 3264/ 4357]
+27628 | 2025-06-25 08:05:35,774 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.363349  [ 3904/ 4357]
+27628 | 2025-06-25 08:05:37,020 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 32.2%, Avg loss: 2.314045
+27628 | 2025-06-25 08:05:37,020 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 5
+-------------------------------
+27628 | 2025-06-25 08:05:37,144 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.374350  [   64/ 4357]
+27628 | 2025-06-25 08:05:38,364 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.351188  [  704/ 4357]
+27628 | 2025-06-25 08:05:39,584 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.312005  [ 1344/ 4357]
+27628 | 2025-06-25 08:05:40,804 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.288864  [ 1984/ 4357]
+27628 | 2025-06-25 08:05:42,024 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.211679  [ 2624/ 4357]
+27628 | 2025-06-25 08:05:43,244 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.220598  [ 3264/ 4357]
+27628 | 2025-06-25 08:05:44,465 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.215349  [ 3904/ 4357]
+27628 | 2025-06-25 08:05:45,703 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 36.4%, Avg loss: 2.149910
+27628 | 2025-06-25 08:05:45,704 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 6
+-------------------------------
+27628 | 2025-06-25 08:05:45,827 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.227546  [   64/ 4357]
+27628 | 2025-06-25 08:05:47,048 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.214184  [  704/ 4357]
+27628 | 2025-06-25 08:05:48,269 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.179573  [ 1344/ 4357]
+27628 | 2025-06-25 08:05:49,490 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.154146  [ 1984/ 4357]
+27628 | 2025-06-25 08:05:50,710 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.077297  [ 2624/ 4357]
+27628 | 2025-06-25 08:05:51,931 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.091808  [ 3264/ 4357]
+27628 | 2025-06-25 08:05:53,152 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.099111  [ 3904/ 4357]
+27628 | 2025-06-25 08:05:54,392 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 39.6%, Avg loss: 2.029727
+27628 | 2025-06-25 08:05:54,392 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 7
+-------------------------------
+27628 | 2025-06-25 08:05:54,515 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.124304  [   64/ 4357]
+27628 | 2025-06-25 08:05:55,736 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.102955  [  704/ 4357]
+27628 | 2025-06-25 08:05:56,956 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.077278  [ 1344/ 4357]
+27628 | 2025-06-25 08:05:58,177 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.046507  [ 1984/ 4357]
+27628 | 2025-06-25 08:05:59,397 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.964395  [ 2624/ 4357]
+27628 | 2025-06-25 08:06:00,618 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.991964  [ 3264/ 4357]
+27628 | 2025-06-25 08:06:01,839 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.010288  [ 3904/ 4357]
+27628 | 2025-06-25 08:06:03,078 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 42.0%, Avg loss: 1.931429
+27628 | 2025-06-25 08:06:03,079 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 8
+-------------------------------
+27628 | 2025-06-25 08:06:03,202 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.018473  [   64/ 4357]
+27628 | 2025-06-25 08:06:04,424 | 🔵 info | train_loop | func/train_test.py:35 | loss: 2.010135  [  704/ 4357]
+27628 | 2025-06-25 08:06:05,645 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.996834  [ 1344/ 4357]
+27628 | 2025-06-25 08:06:06,865 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.963033  [ 1984/ 4357]
+27628 | 2025-06-25 08:06:08,086 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.868281  [ 2624/ 4357]
+27628 | 2025-06-25 08:06:09,306 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.901702  [ 3264/ 4357]
+27628 | 2025-06-25 08:06:10,526 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.938411  [ 3904/ 4357]
+27628 | 2025-06-25 08:06:11,765 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 44.3%, Avg loss: 1.854347
+27628 | 2025-06-25 08:06:11,765 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 9
+-------------------------------
+27628 | 2025-06-25 08:06:11,888 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.935580  [   64/ 4357]
+27628 | 2025-06-25 08:06:13,109 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.924458  [  704/ 4357]
+27628 | 2025-06-25 08:06:14,329 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.920936  [ 1344/ 4357]
+27628 | 2025-06-25 08:06:15,550 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.892912  [ 1984/ 4357]
+27628 | 2025-06-25 08:06:16,771 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.786023  [ 2624/ 4357]
+27628 | 2025-06-25 08:06:17,991 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.827339  [ 3264/ 4357]
+27628 | 2025-06-25 08:06:19,213 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.879171  [ 3904/ 4357]
+27628 | 2025-06-25 08:06:20,453 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 46.5%, Avg loss: 1.777999
+27628 | 2025-06-25 08:06:20,453 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 10
+-------------------------------
+27628 | 2025-06-25 08:06:20,577 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.860179  [   64/ 4357]
+27628 | 2025-06-25 08:06:21,797 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.848882  [  704/ 4357]
+27628 | 2025-06-25 08:06:23,018 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.853740  [ 1344/ 4357]
+27628 | 2025-06-25 08:06:24,238 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.827810  [ 1984/ 4357]
+27628 | 2025-06-25 08:06:25,459 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.718173  [ 2624/ 4357]
+27628 | 2025-06-25 08:06:26,679 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.770427  [ 3264/ 4357]
+27628 | 2025-06-25 08:06:27,900 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.819012  [ 3904/ 4357]
+27628 | 2025-06-25 08:06:29,140 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 48.1%, Avg loss: 1.709841
+27628 | 2025-06-25 08:06:29,140 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 11
+-------------------------------
+27628 | 2025-06-25 08:06:29,263 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.802312  [   64/ 4357]
+27628 | 2025-06-25 08:06:30,484 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.778399  [  704/ 4357]
+27628 | 2025-06-25 08:06:31,704 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.803024  [ 1344/ 4357]
+27628 | 2025-06-25 08:06:32,925 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.773938  [ 1984/ 4357]
+27628 | 2025-06-25 08:06:34,146 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.659987  [ 2624/ 4357]
+27628 | 2025-06-25 08:06:35,368 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.717721  [ 3264/ 4357]
+27628 | 2025-06-25 08:06:36,589 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.775769  [ 3904/ 4357]
+27628 | 2025-06-25 08:06:37,828 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 49.4%, Avg loss: 1.665719
+27628 | 2025-06-25 08:06:37,828 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 12
+-------------------------------
+27628 | 2025-06-25 08:06:37,951 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.756187  [   64/ 4357]
+27628 | 2025-06-25 08:06:39,173 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.706304  [  704/ 4357]
+27628 | 2025-06-25 08:06:40,394 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.741565  [ 1344/ 4357]
+27628 | 2025-06-25 08:06:41,615 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.729402  [ 1984/ 4357]
+27628 | 2025-06-25 08:06:42,836 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.605970  [ 2624/ 4357]
+27628 | 2025-06-25 08:06:44,058 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.674512  [ 3264/ 4357]
+27628 | 2025-06-25 08:06:45,279 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.721208  [ 3904/ 4357]
+27628 | 2025-06-25 08:06:46,520 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 50.9%, Avg loss: 1.614235
+27628 | 2025-06-25 08:06:46,520 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 13
+-------------------------------
+27628 | 2025-06-25 08:06:46,644 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.703504  [   64/ 4357]
+27628 | 2025-06-25 08:06:47,865 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.649410  [  704/ 4357]
+27628 | 2025-06-25 08:06:49,087 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.697320  [ 1344/ 4357]
+27628 | 2025-06-25 08:06:50,310 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.684273  [ 1984/ 4357]
+27628 | 2025-06-25 08:06:51,533 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.558093  [ 2624/ 4357]
+27628 | 2025-06-25 08:06:52,755 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.636159  [ 3264/ 4357]
+27628 | 2025-06-25 08:06:53,977 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.686184  [ 3904/ 4357]
+27628 | 2025-06-25 08:06:55,217 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 52.3%, Avg loss: 1.557827
+27628 | 2025-06-25 08:06:55,217 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 14
+-------------------------------
+27628 | 2025-06-25 08:06:55,341 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.666860  [   64/ 4357]
+27628 | 2025-06-25 08:06:56,563 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.610692  [  704/ 4357]
+27628 | 2025-06-25 08:06:57,784 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.655378  [ 1344/ 4357]
+27628 | 2025-06-25 08:06:59,006 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.646622  [ 1984/ 4357]
+27628 | 2025-06-25 08:07:00,229 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.514386  [ 2624/ 4357]
+27628 | 2025-06-25 08:07:01,451 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.599761  [ 3264/ 4357]
+27628 | 2025-06-25 08:07:02,673 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.649075  [ 3904/ 4357]
+27628 | 2025-06-25 08:07:03,912 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 53.6%, Avg loss: 1.521861
+27628 | 2025-06-25 08:07:03,913 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 15
+-------------------------------
+27628 | 2025-06-25 08:07:04,036 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.633744  [   64/ 4357]
+27628 | 2025-06-25 08:07:05,258 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.562478  [  704/ 4357]
+27628 | 2025-06-25 08:07:06,480 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.618279  [ 1344/ 4357]
+27628 | 2025-06-25 08:07:07,701 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.610108  [ 1984/ 4357]
+27628 | 2025-06-25 08:07:08,922 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.482127  [ 2624/ 4357]
+27628 | 2025-06-25 08:07:10,144 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.566251  [ 3264/ 4357]
+27628 | 2025-06-25 08:07:11,365 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.616822  [ 3904/ 4357]
+27628 | 2025-06-25 08:07:12,606 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 54.7%, Avg loss: 1.477976
+27628 | 2025-06-25 08:07:12,607 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 16
+-------------------------------
+27628 | 2025-06-25 08:07:12,730 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.590789  [   64/ 4357]
+27628 | 2025-06-25 08:07:13,952 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.518734  [  704/ 4357]
+27628 | 2025-06-25 08:07:15,174 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.580461  [ 1344/ 4357]
+27628 | 2025-06-25 08:07:16,395 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.579318  [ 1984/ 4357]
+27628 | 2025-06-25 08:07:17,617 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.454859  [ 2624/ 4357]
+27628 | 2025-06-25 08:07:18,838 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.544052  [ 3264/ 4357]
+27628 | 2025-06-25 08:07:20,060 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.580840  [ 3904/ 4357]
+27628 | 2025-06-25 08:07:21,300 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 54.7%, Avg loss: 1.473267
+27628 | 2025-06-25 08:07:21,300 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 17
+-------------------------------
+27628 | 2025-06-25 08:07:21,424 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.566544  [   64/ 4357]
+27628 | 2025-06-25 08:07:22,645 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.493165  [  704/ 4357]
+27628 | 2025-06-25 08:07:23,866 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.546735  [ 1344/ 4357]
+27628 | 2025-06-25 08:07:25,087 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.552062  [ 1984/ 4357]
+27628 | 2025-06-25 08:07:26,309 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.417755  [ 2624/ 4357]
+27628 | 2025-06-25 08:07:27,530 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.518339  [ 3264/ 4357]
+27628 | 2025-06-25 08:07:28,751 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.549530  [ 3904/ 4357]
+27628 | 2025-06-25 08:07:29,991 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 55.9%, Avg loss: 1.432153
+27628 | 2025-06-25 08:07:29,991 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 18
+-------------------------------
+27628 | 2025-06-25 08:07:30,115 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.536888  [   64/ 4357]
+27628 | 2025-06-25 08:07:31,337 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.466721  [  704/ 4357]
+27628 | 2025-06-25 08:07:32,558 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.519233  [ 1344/ 4357]
+27628 | 2025-06-25 08:07:33,780 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.531719  [ 1984/ 4357]
+27628 | 2025-06-25 08:07:35,002 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.389153  [ 2624/ 4357]
+27628 | 2025-06-25 08:07:36,224 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.490554  [ 3264/ 4357]
+27628 | 2025-06-25 08:07:37,446 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.527071  [ 3904/ 4357]
+27628 | 2025-06-25 08:07:38,685 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 56.7%, Avg loss: 1.398127
+27628 | 2025-06-25 08:07:38,686 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 19
+-------------------------------
+27628 | 2025-06-25 08:07:38,809 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.511801  [   64/ 4357]
+27628 | 2025-06-25 08:07:40,031 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.439438  [  704/ 4357]
+27628 | 2025-06-25 08:07:41,253 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.485783  [ 1344/ 4357]
+27628 | 2025-06-25 08:07:42,475 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.511021  [ 1984/ 4357]
+27628 | 2025-06-25 08:07:43,698 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.368681  [ 2624/ 4357]
+27628 | 2025-06-25 08:07:44,920 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.469192  [ 3264/ 4357]
+27628 | 2025-06-25 08:07:46,142 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.497262  [ 3904/ 4357]
+27628 | 2025-06-25 08:07:47,384 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 57.5%, Avg loss: 1.371610
+27628 | 2025-06-25 08:07:47,384 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 20
+-------------------------------
+27628 | 2025-06-25 08:07:47,508 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.484398  [   64/ 4357]
+27628 | 2025-06-25 08:07:48,730 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.411476  [  704/ 4357]
+27628 | 2025-06-25 08:07:49,951 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.454861  [ 1344/ 4357]
+27628 | 2025-06-25 08:07:51,174 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.491895  [ 1984/ 4357]
+27628 | 2025-06-25 08:07:52,396 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.345846  [ 2624/ 4357]
+27628 | 2025-06-25 08:07:53,617 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.448053  [ 3264/ 4357]
+27628 | 2025-06-25 08:07:54,839 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.478891  [ 3904/ 4357]
+27628 | 2025-06-25 08:07:56,081 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 58.1%, Avg loss: 1.346987
+27628 | 2025-06-25 08:07:56,081 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 21
+-------------------------------
+27628 | 2025-06-25 08:07:56,205 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.468330  [   64/ 4357]
+27628 | 2025-06-25 08:07:57,427 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.381413  [  704/ 4357]
+27628 | 2025-06-25 08:07:58,649 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.427386  [ 1344/ 4357]
+27628 | 2025-06-25 08:07:59,872 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.466955  [ 1984/ 4357]
+27628 | 2025-06-25 08:08:01,094 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.323271  [ 2624/ 4357]
+27628 | 2025-06-25 08:08:02,316 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.426301  [ 3264/ 4357]
+27628 | 2025-06-25 08:08:03,538 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.444577  [ 3904/ 4357]
+27628 | 2025-06-25 08:08:04,779 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 58.7%, Avg loss: 1.326187
+27628 | 2025-06-25 08:08:04,779 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 22
+-------------------------------
+27628 | 2025-06-25 08:08:04,903 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.447509  [   64/ 4357]
+27628 | 2025-06-25 08:08:06,125 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.370216  [  704/ 4357]
+27628 | 2025-06-25 08:08:07,348 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.413093  [ 1344/ 4357]
+27628 | 2025-06-25 08:08:08,570 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.453545  [ 1984/ 4357]
+27628 | 2025-06-25 08:08:09,793 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.305896  [ 2624/ 4357]
+27628 | 2025-06-25 08:08:11,015 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.410418  [ 3264/ 4357]
+27628 | 2025-06-25 08:08:12,238 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.434076  [ 3904/ 4357]
+27628 | 2025-06-25 08:08:13,478 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 59.3%, Avg loss: 1.307171
+27628 | 2025-06-25 08:08:13,479 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 23
+-------------------------------
+27628 | 2025-06-25 08:08:13,602 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.437940  [   64/ 4357]
+27628 | 2025-06-25 08:08:14,825 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.350233  [  704/ 4357]
+27628 | 2025-06-25 08:08:16,048 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.389451  [ 1344/ 4357]
+27628 | 2025-06-25 08:08:17,271 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.433370  [ 1984/ 4357]
+27628 | 2025-06-25 08:08:18,493 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.285567  [ 2624/ 4357]
+27628 | 2025-06-25 08:08:19,716 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.391270  [ 3264/ 4357]
+27628 | 2025-06-25 08:08:20,939 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.406989  [ 3904/ 4357]
+27628 | 2025-06-25 08:08:22,182 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 59.8%, Avg loss: 1.283130
+27628 | 2025-06-25 08:08:22,182 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 24
+-------------------------------
+27628 | 2025-06-25 08:08:22,306 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.419662  [   64/ 4357]
+27628 | 2025-06-25 08:08:23,529 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.332156  [  704/ 4357]
+27628 | 2025-06-25 08:08:24,751 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.373153  [ 1344/ 4357]
+27628 | 2025-06-25 08:08:25,974 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.417398  [ 1984/ 4357]
+27628 | 2025-06-25 08:08:27,196 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.269634  [ 2624/ 4357]
+27628 | 2025-06-25 08:08:28,419 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.376055  [ 3264/ 4357]
+27628 | 2025-06-25 08:08:29,641 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.393117  [ 3904/ 4357]
+27628 | 2025-06-25 08:08:30,882 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 60.5%, Avg loss: 1.258766
+27628 | 2025-06-25 08:08:30,882 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 25
+-------------------------------
+27628 | 2025-06-25 08:08:31,006 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.397344  [   64/ 4357]
+27628 | 2025-06-25 08:08:32,229 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.317435  [  704/ 4357]
+27628 | 2025-06-25 08:08:33,451 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.349140  [ 1344/ 4357]
+27628 | 2025-06-25 08:08:34,674 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.402142  [ 1984/ 4357]
+27628 | 2025-06-25 08:08:35,896 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.249937  [ 2624/ 4357]
+27628 | 2025-06-25 08:08:37,118 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.355125  [ 3264/ 4357]
+27628 | 2025-06-25 08:08:38,342 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.376490  [ 3904/ 4357]
+27628 | 2025-06-25 08:08:39,583 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 60.9%, Avg loss: 1.246197
+27628 | 2025-06-25 08:08:39,584 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 26
+-------------------------------
+27628 | 2025-06-25 08:08:39,708 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.376860  [   64/ 4357]
+27628 | 2025-06-25 08:08:40,931 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.293772  [  704/ 4357]
+27628 | 2025-06-25 08:08:42,154 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.336172  [ 1344/ 4357]
+27628 | 2025-06-25 08:08:43,376 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.380089  [ 1984/ 4357]
+27628 | 2025-06-25 08:08:44,598 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.238250  [ 2624/ 4357]
+27628 | 2025-06-25 08:08:45,820 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.342107  [ 3264/ 4357]
+27628 | 2025-06-25 08:08:47,043 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.357257  [ 3904/ 4357]
+27628 | 2025-06-25 08:08:48,285 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 61.2%, Avg loss: 1.231004
+27628 | 2025-06-25 08:08:48,285 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 27
+-------------------------------
+27628 | 2025-06-25 08:08:48,409 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.362750  [   64/ 4357]
+27628 | 2025-06-25 08:08:49,631 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.271948  [  704/ 4357]
+27628 | 2025-06-25 08:08:50,853 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.317115  [ 1344/ 4357]
+27628 | 2025-06-25 08:08:52,076 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.365426  [ 1984/ 4357]
+27628 | 2025-06-25 08:08:53,298 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.223644  [ 2624/ 4357]
+27628 | 2025-06-25 08:08:54,520 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.328133  [ 3264/ 4357]
+27628 | 2025-06-25 08:08:55,743 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.343195  [ 3904/ 4357]
+27628 | 2025-06-25 08:08:56,984 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 61.8%, Avg loss: 1.211266
+27628 | 2025-06-25 08:08:56,984 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 28
+-------------------------------
+27628 | 2025-06-25 08:08:57,108 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.337448  [   64/ 4357]
+27628 | 2025-06-25 08:08:58,330 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.256681  [  704/ 4357]
+27628 | 2025-06-25 08:08:59,552 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.302887  [ 1344/ 4357]
+27628 | 2025-06-25 08:09:00,774 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.348118  [ 1984/ 4357]
+27628 | 2025-06-25 08:09:01,996 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.213153  [ 2624/ 4357]
+27628 | 2025-06-25 08:09:03,218 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.311814  [ 3264/ 4357]
+27628 | 2025-06-25 08:09:04,440 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.325219  [ 3904/ 4357]
+27628 | 2025-06-25 08:09:05,681 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 62.4%, Avg loss: 1.191802
+27628 | 2025-06-25 08:09:05,681 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 29
+-------------------------------
+27628 | 2025-06-25 08:09:05,805 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.319685  [   64/ 4357]
+27628 | 2025-06-25 08:09:07,026 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.238088  [  704/ 4357]
+27628 | 2025-06-25 08:09:08,249 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.280485  [ 1344/ 4357]
+27628 | 2025-06-25 08:09:09,470 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.328590  [ 1984/ 4357]
+27628 | 2025-06-25 08:09:10,692 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.195904  [ 2624/ 4357]
+27628 | 2025-06-25 08:09:11,914 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.289844  [ 3264/ 4357]
+27628 | 2025-06-25 08:09:13,136 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.311988  [ 3904/ 4357]
+27628 | 2025-06-25 08:09:14,376 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 62.9%, Avg loss: 1.164241
+27628 | 2025-06-25 08:09:14,376 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 30
+-------------------------------
+27628 | 2025-06-25 08:09:14,500 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.296586  [   64/ 4357]
+27628 | 2025-06-25 08:09:15,721 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.214467  [  704/ 4357]
+27628 | 2025-06-25 08:09:16,942 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.263139  [ 1344/ 4357]
+27628 | 2025-06-25 08:09:18,164 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.310691  [ 1984/ 4357]
+27628 | 2025-06-25 08:09:19,385 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.176407  [ 2624/ 4357]
+27628 | 2025-06-25 08:09:20,606 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.280132  [ 3264/ 4357]
+27628 | 2025-06-25 08:09:21,827 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.298728  [ 3904/ 4357]
+27628 | 2025-06-25 08:09:23,067 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 63.9%, Avg loss: 1.136577
+27628 | 2025-06-25 08:09:23,067 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 31
+-------------------------------
+27628 | 2025-06-25 08:09:23,190 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.284390  [   64/ 4357]
+27628 | 2025-06-25 08:09:24,411 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.205634  [  704/ 4357]
+27628 | 2025-06-25 08:09:25,632 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.253531  [ 1344/ 4357]
+27628 | 2025-06-25 08:09:26,852 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.295136  [ 1984/ 4357]
+27628 | 2025-06-25 08:09:28,074 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.163360  [ 2624/ 4357]
+27628 | 2025-06-25 08:09:29,295 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.266718  [ 3264/ 4357]
+27628 | 2025-06-25 08:09:30,516 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.276325  [ 3904/ 4357]
+27628 | 2025-06-25 08:09:31,755 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 64.6%, Avg loss: 1.113721
+27628 | 2025-06-25 08:09:31,756 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 32
+-------------------------------
+27628 | 2025-06-25 08:09:31,879 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.260923  [   64/ 4357]
+27628 | 2025-06-25 08:09:33,100 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.191335  [  704/ 4357]
+27628 | 2025-06-25 08:09:34,321 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.231220  [ 1344/ 4357]
+27628 | 2025-06-25 08:09:35,542 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.279715  [ 1984/ 4357]
+27628 | 2025-06-25 08:09:36,762 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.150783  [ 2624/ 4357]
+27628 | 2025-06-25 08:09:37,984 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.253099  [ 3264/ 4357]
+27628 | 2025-06-25 08:09:39,206 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.258700  [ 3904/ 4357]
+27628 | 2025-06-25 08:09:40,447 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 65.1%, Avg loss: 1.101124
+27628 | 2025-06-25 08:09:40,447 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 33
+-------------------------------
+27628 | 2025-06-25 08:09:40,570 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.242211  [   64/ 4357]
+27628 | 2025-06-25 08:09:41,792 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.181304  [  704/ 4357]
+27628 | 2025-06-25 08:09:43,014 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.210616  [ 1344/ 4357]
+27628 | 2025-06-25 08:09:44,234 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.255282  [ 1984/ 4357]
+27628 | 2025-06-25 08:09:45,455 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.132308  [ 2624/ 4357]
+27628 | 2025-06-25 08:09:46,676 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.234061  [ 3264/ 4357]
+27628 | 2025-06-25 08:09:47,896 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.245758  [ 3904/ 4357]
+27628 | 2025-06-25 08:09:49,136 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 65.7%, Avg loss: 1.079640
+27628 | 2025-06-25 08:09:49,137 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 34
+-------------------------------
+27628 | 2025-06-25 08:09:49,260 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.229927  [   64/ 4357]
+27628 | 2025-06-25 08:09:50,481 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.166838  [  704/ 4357]
+27628 | 2025-06-25 08:09:51,701 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.195943  [ 1344/ 4357]
+27628 | 2025-06-25 08:09:52,922 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.247358  [ 1984/ 4357]
+27628 | 2025-06-25 08:09:54,142 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.130541  [ 2624/ 4357]
+27628 | 2025-06-25 08:09:55,363 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.219491  [ 3264/ 4357]
+27628 | 2025-06-25 08:09:56,584 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.234862  [ 3904/ 4357]
+27628 | 2025-06-25 08:09:57,823 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 66.2%, Avg loss: 1.060664
+27628 | 2025-06-25 08:09:57,823 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 35
+-------------------------------
+27628 | 2025-06-25 08:09:57,946 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.225345  [   64/ 4357]
+27628 | 2025-06-25 08:09:59,167 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.151825  [  704/ 4357]
+27628 | 2025-06-25 08:10:00,388 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.194328  [ 1344/ 4357]
+27628 | 2025-06-25 08:10:01,608 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.236001  [ 1984/ 4357]
+27628 | 2025-06-25 08:10:02,829 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.113117  [ 2624/ 4357]
+27628 | 2025-06-25 08:10:04,049 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.205447  [ 3264/ 4357]
+27628 | 2025-06-25 08:10:05,271 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.219723  [ 3904/ 4357]
+27628 | 2025-06-25 08:10:06,510 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 65.9%, Avg loss: 1.064010
+27628 | 2025-06-25 08:10:06,511 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 36
+-------------------------------
+27628 | 2025-06-25 08:10:06,634 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.206510  [   64/ 4357]
+27628 | 2025-06-25 08:10:07,854 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.138381  [  704/ 4357]
+27628 | 2025-06-25 08:10:09,074 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.173215  [ 1344/ 4357]
+27628 | 2025-06-25 08:10:10,294 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.212690  [ 1984/ 4357]
+27628 | 2025-06-25 08:10:11,514 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.105414  [ 2624/ 4357]
+27628 | 2025-06-25 08:10:12,734 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.194705  [ 3264/ 4357]
+27628 | 2025-06-25 08:10:13,955 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.201810  [ 3904/ 4357]
+27628 | 2025-06-25 08:10:15,194 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 66.4%, Avg loss: 1.046850
+27628 | 2025-06-25 08:10:15,194 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 37
+-------------------------------
+27628 | 2025-06-25 08:10:15,318 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.188046  [   64/ 4357]
+27628 | 2025-06-25 08:10:16,538 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.128238  [  704/ 4357]
+27628 | 2025-06-25 08:10:17,758 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.162888  [ 1344/ 4357]
+27628 | 2025-06-25 08:10:18,979 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.204945  [ 1984/ 4357]
+27628 | 2025-06-25 08:10:20,200 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.082019  [ 2624/ 4357]
+27628 | 2025-06-25 08:10:21,420 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.192013  [ 3264/ 4357]
+27628 | 2025-06-25 08:10:22,640 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.197112  [ 3904/ 4357]
+27628 | 2025-06-25 08:10:23,879 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 67.2%, Avg loss: 1.031676
+27628 | 2025-06-25 08:10:23,879 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 38
+-------------------------------
+27628 | 2025-06-25 08:10:24,002 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.187504  [   64/ 4357]
+27628 | 2025-06-25 08:10:25,223 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.112861  [  704/ 4357]
+27628 | 2025-06-25 08:10:26,444 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.145574  [ 1344/ 4357]
+27628 | 2025-06-25 08:10:27,664 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.184115  [ 1984/ 4357]
+27628 | 2025-06-25 08:10:28,884 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.073497  [ 2624/ 4357]
+27628 | 2025-06-25 08:10:30,105 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.165701  [ 3264/ 4357]
+27628 | 2025-06-25 08:10:31,326 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.180410  [ 3904/ 4357]
+27628 | 2025-06-25 08:10:32,565 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 67.9%, Avg loss: 1.002671
+27628 | 2025-06-25 08:10:32,565 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 39
+-------------------------------
+27628 | 2025-06-25 08:10:32,688 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.171709  [   64/ 4357]
+27628 | 2025-06-25 08:10:33,909 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.099235  [  704/ 4357]
+27628 | 2025-06-25 08:10:35,129 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.125661  [ 1344/ 4357]
+27628 | 2025-06-25 08:10:36,349 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.166604  [ 1984/ 4357]
+27628 | 2025-06-25 08:10:37,569 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.063288  [ 2624/ 4357]
+27628 | 2025-06-25 08:10:38,789 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.148852  [ 3264/ 4357]
+27628 | 2025-06-25 08:10:40,009 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.174175  [ 3904/ 4357]
+27628 | 2025-06-25 08:10:41,247 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 68.7%, Avg loss: 0.979825
+27628 | 2025-06-25 08:10:41,248 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 40
+-------------------------------
+27628 | 2025-06-25 08:10:41,371 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.148905  [   64/ 4357]
+27628 | 2025-06-25 08:10:42,590 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.087905  [  704/ 4357]
+27628 | 2025-06-25 08:10:43,810 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.102262  [ 1344/ 4357]
+27628 | 2025-06-25 08:10:45,030 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.143436  [ 1984/ 4357]
+27628 | 2025-06-25 08:10:46,250 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.052935  [ 2624/ 4357]
+27628 | 2025-06-25 08:10:47,469 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.133067  [ 3264/ 4357]
+27628 | 2025-06-25 08:10:48,689 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.142021  [ 3904/ 4357]
+27628 | 2025-06-25 08:10:49,927 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 69.4%, Avg loss: 0.958165
+27628 | 2025-06-25 08:10:49,927 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 41
+-------------------------------
+27628 | 2025-06-25 08:10:50,051 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.128615  [   64/ 4357]
+27628 | 2025-06-25 08:10:51,270 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.061324  [  704/ 4357]
+27628 | 2025-06-25 08:10:52,489 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.088154  [ 1344/ 4357]
+27628 | 2025-06-25 08:10:53,709 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.136330  [ 1984/ 4357]
+27628 | 2025-06-25 08:10:54,928 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.028193  [ 2624/ 4357]
+27628 | 2025-06-25 08:10:56,147 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.120337  [ 3264/ 4357]
+27628 | 2025-06-25 08:10:57,366 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.136814  [ 3904/ 4357]
+27628 | 2025-06-25 08:10:58,603 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 69.4%, Avg loss: 0.956933
+27628 | 2025-06-25 08:10:58,603 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 42
+-------------------------------
+27628 | 2025-06-25 08:10:58,727 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.109310  [   64/ 4357]
+27628 | 2025-06-25 08:10:59,946 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.044463  [  704/ 4357]
+27628 | 2025-06-25 08:11:01,164 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.078237  [ 1344/ 4357]
+27628 | 2025-06-25 08:11:02,383 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.114347  [ 1984/ 4357]
+27628 | 2025-06-25 08:11:03,602 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.007203  [ 2624/ 4357]
+27628 | 2025-06-25 08:11:04,821 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.096978  [ 3264/ 4357]
+27628 | 2025-06-25 08:11:06,039 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.117395  [ 3904/ 4357]
+27628 | 2025-06-25 08:11:07,276 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 70.1%, Avg loss: 0.933320
+27628 | 2025-06-25 08:11:07,276 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 43
+-------------------------------
+27628 | 2025-06-25 08:11:07,400 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.097624  [   64/ 4357]
+27628 | 2025-06-25 08:11:08,618 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.028702  [  704/ 4357]
+27628 | 2025-06-25 08:11:09,836 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.057108  [ 1344/ 4357]
+27628 | 2025-06-25 08:11:11,054 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.103490  [ 1984/ 4357]
+27628 | 2025-06-25 08:11:12,271 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.997416  [ 2624/ 4357]
+27628 | 2025-06-25 08:11:13,489 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.084920  [ 3264/ 4357]
+27628 | 2025-06-25 08:11:14,707 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.107793  [ 3904/ 4357]
+27628 | 2025-06-25 08:11:15,944 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 70.1%, Avg loss: 0.927484
+27628 | 2025-06-25 08:11:15,944 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 44
+-------------------------------
+27628 | 2025-06-25 08:11:16,067 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.095878  [   64/ 4357]
+27628 | 2025-06-25 08:11:17,286 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.024301  [  704/ 4357]
+27628 | 2025-06-25 08:11:18,503 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.044687  [ 1344/ 4357]
+27628 | 2025-06-25 08:11:19,720 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.083740  [ 1984/ 4357]
+27628 | 2025-06-25 08:11:20,937 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.984259  [ 2624/ 4357]
+27628 | 2025-06-25 08:11:22,154 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.075202  [ 3264/ 4357]
+27628 | 2025-06-25 08:11:23,372 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.102252  [ 3904/ 4357]
+27628 | 2025-06-25 08:11:24,608 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 71.2%, Avg loss: 0.895117
+27628 | 2025-06-25 08:11:24,608 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 45
+-------------------------------
+27628 | 2025-06-25 08:11:24,732 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.071196  [   64/ 4357]
+27628 | 2025-06-25 08:11:25,949 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.002143  [  704/ 4357]
+27628 | 2025-06-25 08:11:27,166 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.031311  [ 1344/ 4357]
+27628 | 2025-06-25 08:11:28,383 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.069243  [ 1984/ 4357]
+27628 | 2025-06-25 08:11:29,599 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.977144  [ 2624/ 4357]
+27628 | 2025-06-25 08:11:30,816 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.058409  [ 3264/ 4357]
+27628 | 2025-06-25 08:11:32,034 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.075135  [ 3904/ 4357]
+27628 | 2025-06-25 08:11:33,271 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 71.8%, Avg loss: 0.881005
+27628 | 2025-06-25 08:11:33,271 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 46
+-------------------------------
+27628 | 2025-06-25 08:11:33,394 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.058648  [   64/ 4357]
+27628 | 2025-06-25 08:11:34,612 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.995836  [  704/ 4357]
+27628 | 2025-06-25 08:11:35,830 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.026537  [ 1344/ 4357]
+27628 | 2025-06-25 08:11:37,047 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.058984  [ 1984/ 4357]
+27628 | 2025-06-25 08:11:38,264 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.963965  [ 2624/ 4357]
+27628 | 2025-06-25 08:11:39,481 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.045829  [ 3264/ 4357]
+27628 | 2025-06-25 08:11:40,698 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.069521  [ 3904/ 4357]
+27628 | 2025-06-25 08:11:41,933 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 71.9%, Avg loss: 0.876008
+27628 | 2025-06-25 08:11:41,934 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 47
+-------------------------------
+27628 | 2025-06-25 08:11:42,057 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.051692  [   64/ 4357]
+27628 | 2025-06-25 08:11:43,273 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.989100  [  704/ 4357]
+27628 | 2025-06-25 08:11:44,489 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.001448  [ 1344/ 4357]
+27628 | 2025-06-25 08:11:45,705 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.041889  [ 1984/ 4357]
+27628 | 2025-06-25 08:11:46,922 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.946609  [ 2624/ 4357]
+27628 | 2025-06-25 08:11:48,139 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.031063  [ 3264/ 4357]
+27628 | 2025-06-25 08:11:49,356 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.057371  [ 3904/ 4357]
+27628 | 2025-06-25 08:11:50,591 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 72.3%, Avg loss: 0.859251
+27628 | 2025-06-25 08:11:50,592 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 48
+-------------------------------
+27628 | 2025-06-25 08:11:50,714 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.037381  [   64/ 4357]
+27628 | 2025-06-25 08:11:51,931 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.970371  [  704/ 4357]
+27628 | 2025-06-25 08:11:53,148 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.993216  [ 1344/ 4357]
+27628 | 2025-06-25 08:11:54,364 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.037949  [ 1984/ 4357]
+27628 | 2025-06-25 08:11:55,581 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.944873  [ 2624/ 4357]
+27628 | 2025-06-25 08:11:56,797 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.028919  [ 3264/ 4357]
+27628 | 2025-06-25 08:11:58,014 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.039729  [ 3904/ 4357]
+27628 | 2025-06-25 08:11:59,250 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 73.1%, Avg loss: 0.834203
+27628 | 2025-06-25 08:11:59,250 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 49
+-------------------------------
+27628 | 2025-06-25 08:11:59,373 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.019019  [   64/ 4357]
+27628 | 2025-06-25 08:12:00,589 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.956245  [  704/ 4357]
+27628 | 2025-06-25 08:12:01,805 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.977506  [ 1344/ 4357]
+27628 | 2025-06-25 08:12:03,022 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.018498  [ 1984/ 4357]
+27628 | 2025-06-25 08:12:04,237 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.939418  [ 2624/ 4357]
+27628 | 2025-06-25 08:12:05,454 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.012923  [ 3264/ 4357]
+27628 | 2025-06-25 08:12:06,670 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.030840  [ 3904/ 4357]
+27628 | 2025-06-25 08:12:07,905 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 73.1%, Avg loss: 0.832149
+27628 | 2025-06-25 08:12:07,905 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 50
+-------------------------------
+27628 | 2025-06-25 08:12:08,028 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.023131  [   64/ 4357]
+27628 | 2025-06-25 08:12:09,244 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.951568  [  704/ 4357]
+27628 | 2025-06-25 08:12:10,461 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.962712  [ 1344/ 4357]
+27628 | 2025-06-25 08:12:11,677 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.004761  [ 1984/ 4357]
+27628 | 2025-06-25 08:12:12,893 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.916392  [ 2624/ 4357]
+27628 | 2025-06-25 08:12:14,110 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.000810  [ 3264/ 4357]
+27628 | 2025-06-25 08:12:15,326 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.005155  [ 3904/ 4357]
+27628 | 2025-06-25 08:12:16,561 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 73.7%, Avg loss: 0.814857
+27628 | 2025-06-25 08:12:16,561 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 51
+-------------------------------
+27628 | 2025-06-25 08:12:16,684 | 🔵 info | train_loop | func/train_test.py:35 | loss: 1.008127  [   64/ 4357]
+27628 | 2025-06-25 08:12:17,900 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.932014  [  704/ 4357]
+27628 | 2025-06-25 08:12:19,117 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.961608  [ 1344/ 4357]
+27628 | 2025-06-25 08:12:20,334 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.989588  [ 1984/ 4357]
+27628 | 2025-06-25 08:12:21,550 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.914488  [ 2624/ 4357]
+27628 | 2025-06-25 08:12:22,767 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.982316  [ 3264/ 4357]
+27628 | 2025-06-25 08:12:23,983 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.986942  [ 3904/ 4357]
+27628 | 2025-06-25 08:12:25,218 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 74.4%, Avg loss: 0.789226
+27628 | 2025-06-25 08:12:25,218 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 52
+-------------------------------
+27628 | 2025-06-25 08:12:25,341 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.980646  [   64/ 4357]
+27628 | 2025-06-25 08:12:26,557 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.926653  [  704/ 4357]
+27628 | 2025-06-25 08:12:27,773 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.943149  [ 1344/ 4357]
+27628 | 2025-06-25 08:12:28,990 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.980386  [ 1984/ 4357]
+27628 | 2025-06-25 08:12:30,207 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.894807  [ 2624/ 4357]
+27628 | 2025-06-25 08:12:31,424 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.970097  [ 3264/ 4357]
+27628 | 2025-06-25 08:12:32,642 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.978061  [ 3904/ 4357]
+27628 | 2025-06-25 08:12:33,877 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 75.1%, Avg loss: 0.773323
+27628 | 2025-06-25 08:12:33,877 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 53
+-------------------------------
+27628 | 2025-06-25 08:12:34,000 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.974150  [   64/ 4357]
+27628 | 2025-06-25 08:12:35,216 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.912765  [  704/ 4357]
+27628 | 2025-06-25 08:12:36,433 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.932340  [ 1344/ 4357]
+27628 | 2025-06-25 08:12:37,649 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.972704  [ 1984/ 4357]
+27628 | 2025-06-25 08:12:38,865 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.875070  [ 2624/ 4357]
+27628 | 2025-06-25 08:12:40,081 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.959770  [ 3264/ 4357]
+27628 | 2025-06-25 08:12:41,298 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.972141  [ 3904/ 4357]
+27628 | 2025-06-25 08:12:42,533 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 75.7%, Avg loss: 0.759828
+27628 | 2025-06-25 08:12:42,533 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 54
+-------------------------------
+27628 | 2025-06-25 08:12:42,656 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.962355  [   64/ 4357]
+27628 | 2025-06-25 08:12:43,873 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.907599  [  704/ 4357]
+27628 | 2025-06-25 08:12:45,089 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.921327  [ 1344/ 4357]
+27628 | 2025-06-25 08:12:46,305 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.951936  [ 1984/ 4357]
+27628 | 2025-06-25 08:12:47,521 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.873352  [ 2624/ 4357]
+27628 | 2025-06-25 08:12:48,737 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.935271  [ 3264/ 4357]
+27628 | 2025-06-25 08:12:49,953 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.944708  [ 3904/ 4357]
+27628 | 2025-06-25 08:12:51,190 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 76.4%, Avg loss: 0.738071
+27628 | 2025-06-25 08:12:51,190 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 55
+-------------------------------
+27628 | 2025-06-25 08:12:51,313 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.940729  [   64/ 4357]
+27628 | 2025-06-25 08:12:52,529 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.886814  [  704/ 4357]
+27628 | 2025-06-25 08:12:53,745 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.903657  [ 1344/ 4357]
+27628 | 2025-06-25 08:12:54,961 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.933957  [ 1984/ 4357]
+27628 | 2025-06-25 08:12:56,178 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.855987  [ 2624/ 4357]
+27628 | 2025-06-25 08:12:57,394 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.933139  [ 3264/ 4357]
+27628 | 2025-06-25 08:12:58,610 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.948498  [ 3904/ 4357]
+27628 | 2025-06-25 08:12:59,846 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 76.2%, Avg loss: 0.739996
+27628 | 2025-06-25 08:12:59,847 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 56
+-------------------------------
+27628 | 2025-06-25 08:12:59,970 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.938028  [   64/ 4357]
+27628 | 2025-06-25 08:13:01,186 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.874960  [  704/ 4357]
+27628 | 2025-06-25 08:13:02,403 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.908516  [ 1344/ 4357]
+27628 | 2025-06-25 08:13:03,619 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.927638  [ 1984/ 4357]
+27628 | 2025-06-25 08:13:04,836 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.850442  [ 2624/ 4357]
+27628 | 2025-06-25 08:13:06,053 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.923722  [ 3264/ 4357]
+27628 | 2025-06-25 08:13:07,269 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.928704  [ 3904/ 4357]
+27628 | 2025-06-25 08:13:08,505 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 77.0%, Avg loss: 0.711909
+27628 | 2025-06-25 08:13:08,505 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 57
+-------------------------------
+27628 | 2025-06-25 08:13:08,628 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.917868  [   64/ 4357]
+27628 | 2025-06-25 08:13:09,845 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.870868  [  704/ 4357]
+27628 | 2025-06-25 08:13:11,062 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.896248  [ 1344/ 4357]
+27628 | 2025-06-25 08:13:12,278 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.923538  [ 1984/ 4357]
+27628 | 2025-06-25 08:13:13,495 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.842952  [ 2624/ 4357]
+27628 | 2025-06-25 08:13:14,712 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.921809  [ 3264/ 4357]
+27628 | 2025-06-25 08:13:15,929 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.913105  [ 3904/ 4357]
+27628 | 2025-06-25 08:13:17,165 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 77.6%, Avg loss: 0.694681
+27628 | 2025-06-25 08:13:17,165 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 58
+-------------------------------
+27628 | 2025-06-25 08:13:17,288 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.916186  [   64/ 4357]
+27628 | 2025-06-25 08:13:18,505 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.864144  [  704/ 4357]
+27628 | 2025-06-25 08:13:19,723 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.882716  [ 1344/ 4357]
+27628 | 2025-06-25 08:13:20,940 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.910325  [ 1984/ 4357]
+27628 | 2025-06-25 08:13:22,157 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.826612  [ 2624/ 4357]
+27628 | 2025-06-25 08:13:23,375 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.904741  [ 3264/ 4357]
+27628 | 2025-06-25 08:13:24,592 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.912343  [ 3904/ 4357]
+27628 | 2025-06-25 08:13:25,829 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 78.3%, Avg loss: 0.678875
+27628 | 2025-06-25 08:13:25,829 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 59
+-------------------------------
+27628 | 2025-06-25 08:13:25,953 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.915953  [   64/ 4357]
+27628 | 2025-06-25 08:13:27,170 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.851470  [  704/ 4357]
+27628 | 2025-06-25 08:13:28,388 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.867491  [ 1344/ 4357]
+27628 | 2025-06-25 08:13:29,606 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.891970  [ 1984/ 4357]
+27628 | 2025-06-25 08:13:30,826 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.823035  [ 2624/ 4357]
+27628 | 2025-06-25 08:13:32,045 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.888428  [ 3264/ 4357]
+27628 | 2025-06-25 08:13:33,265 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.901276  [ 3904/ 4357]
+27628 | 2025-06-25 08:13:34,503 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 78.5%, Avg loss: 0.668091
+27628 | 2025-06-25 08:13:34,503 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 60
+-------------------------------
+27628 | 2025-06-25 08:13:34,627 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.891974  [   64/ 4357]
+27628 | 2025-06-25 08:13:35,846 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.833386  [  704/ 4357]
+27628 | 2025-06-25 08:13:37,066 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.856497  [ 1344/ 4357]
+27628 | 2025-06-25 08:13:38,285 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.893426  [ 1984/ 4357]
+27628 | 2025-06-25 08:13:39,505 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.800677  [ 2624/ 4357]
+27628 | 2025-06-25 08:13:40,725 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.864972  [ 3264/ 4357]
+27628 | 2025-06-25 08:13:41,945 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.885647  [ 3904/ 4357]
+27628 | 2025-06-25 08:13:43,183 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 78.2%, Avg loss: 0.675472
+27628 | 2025-06-25 08:13:43,183 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 61
+-------------------------------
+27628 | 2025-06-25 08:13:43,306 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.896979  [   64/ 4357]
+27628 | 2025-06-25 08:13:44,526 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.822311  [  704/ 4357]
+27628 | 2025-06-25 08:13:45,746 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.849212  [ 1344/ 4357]
+27628 | 2025-06-25 08:13:46,965 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.877307  [ 1984/ 4357]
+27628 | 2025-06-25 08:13:48,185 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.798299  [ 2624/ 4357]
+27628 | 2025-06-25 08:13:49,404 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.857335  [ 3264/ 4357]
+27628 | 2025-06-25 08:13:50,624 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.875248  [ 3904/ 4357]
+27628 | 2025-06-25 08:13:51,862 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 79.0%, Avg loss: 0.649699
+27628 | 2025-06-25 08:13:51,863 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 62
+-------------------------------
+27628 | 2025-06-25 08:13:51,986 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.881740  [   64/ 4357]
+27628 | 2025-06-25 08:13:53,205 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.807766  [  704/ 4357]
+27628 | 2025-06-25 08:13:54,426 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.845014  [ 1344/ 4357]
+27628 | 2025-06-25 08:13:55,646 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.859769  [ 1984/ 4357]
+27628 | 2025-06-25 08:13:56,866 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.790510  [ 2624/ 4357]
+27628 | 2025-06-25 08:13:58,086 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.849017  [ 3264/ 4357]
+27628 | 2025-06-25 08:13:59,306 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.874800  [ 3904/ 4357]
+27628 | 2025-06-25 08:14:00,545 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 79.2%, Avg loss: 0.643859
+27628 | 2025-06-25 08:14:00,545 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 63
+-------------------------------
+27628 | 2025-06-25 08:14:00,668 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.858087  [   64/ 4357]
+27628 | 2025-06-25 08:14:01,888 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.802636  [  704/ 4357]
+27628 | 2025-06-25 08:14:03,108 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.825843  [ 1344/ 4357]
+27628 | 2025-06-25 08:14:04,328 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.844096  [ 1984/ 4357]
+27628 | 2025-06-25 08:14:05,549 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.771357  [ 2624/ 4357]
+27628 | 2025-06-25 08:14:06,769 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.827710  [ 3264/ 4357]
+27628 | 2025-06-25 08:14:07,989 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.861738  [ 3904/ 4357]
+27628 | 2025-06-25 08:14:09,227 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 79.6%, Avg loss: 0.635066
+27628 | 2025-06-25 08:14:09,228 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 64
+-------------------------------
+27628 | 2025-06-25 08:14:09,351 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.869232  [   64/ 4357]
+27628 | 2025-06-25 08:14:10,572 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.789609  [  704/ 4357]
+27628 | 2025-06-25 08:14:11,792 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.810772  [ 1344/ 4357]
+27628 | 2025-06-25 08:14:13,012 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.841886  [ 1984/ 4357]
+27628 | 2025-06-25 08:14:14,232 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.767500  [ 2624/ 4357]
+27628 | 2025-06-25 08:14:15,453 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.817913  [ 3264/ 4357]
+27628 | 2025-06-25 08:14:16,673 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.842181  [ 3904/ 4357]
+27628 | 2025-06-25 08:14:17,912 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 80.2%, Avg loss: 0.612041
+27628 | 2025-06-25 08:14:17,912 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 65
+-------------------------------
+27628 | 2025-06-25 08:14:18,035 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.847515  [   64/ 4357]
+27628 | 2025-06-25 08:14:19,255 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.790890  [  704/ 4357]
+27628 | 2025-06-25 08:14:20,476 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.812241  [ 1344/ 4357]
+27628 | 2025-06-25 08:14:21,696 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.836586  [ 1984/ 4357]
+27628 | 2025-06-25 08:14:22,915 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.755525  [ 2624/ 4357]
+27628 | 2025-06-25 08:14:24,135 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.814178  [ 3264/ 4357]
+27628 | 2025-06-25 08:14:25,358 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.838673  [ 3904/ 4357]
+27628 | 2025-06-25 08:14:26,597 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 80.4%, Avg loss: 0.603473
+27628 | 2025-06-25 08:14:26,598 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 66
+-------------------------------
+27628 | 2025-06-25 08:14:26,721 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.844159  [   64/ 4357]
+27628 | 2025-06-25 08:14:27,941 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.771956  [  704/ 4357]
+27628 | 2025-06-25 08:14:29,162 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.799395  [ 1344/ 4357]
+27628 | 2025-06-25 08:14:30,383 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.819952  [ 1984/ 4357]
+27628 | 2025-06-25 08:14:31,604 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.757372  [ 2624/ 4357]
+27628 | 2025-06-25 08:14:32,825 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.807556  [ 3264/ 4357]
+27628 | 2025-06-25 08:14:34,046 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.830661  [ 3904/ 4357]
+27628 | 2025-06-25 08:14:35,287 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 81.4%, Avg loss: 0.582005
+27628 | 2025-06-25 08:14:35,287 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 67
+-------------------------------
+27628 | 2025-06-25 08:14:35,411 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.837351  [   64/ 4357]
+27628 | 2025-06-25 08:14:36,632 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.773021  [  704/ 4357]
+27628 | 2025-06-25 08:14:37,853 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.780301  [ 1344/ 4357]
+27628 | 2025-06-25 08:14:39,074 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.805983  [ 1984/ 4357]
+27628 | 2025-06-25 08:14:40,295 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.735750  [ 2624/ 4357]
+27628 | 2025-06-25 08:14:41,516 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.798022  [ 3264/ 4357]
+27628 | 2025-06-25 08:14:42,737 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.820166  [ 3904/ 4357]
+27628 | 2025-06-25 08:14:43,976 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 81.5%, Avg loss: 0.577879
+27628 | 2025-06-25 08:14:43,977 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 68
+-------------------------------
+27628 | 2025-06-25 08:14:44,100 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.809263  [   64/ 4357]
+27628 | 2025-06-25 08:14:45,321 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.756121  [  704/ 4357]
+27628 | 2025-06-25 08:14:46,542 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.770570  [ 1344/ 4357]
+27628 | 2025-06-25 08:14:47,762 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.792125  [ 1984/ 4357]
+27628 | 2025-06-25 08:14:48,982 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.735516  [ 2624/ 4357]
+27628 | 2025-06-25 08:14:50,203 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.779429  [ 3264/ 4357]
+27628 | 2025-06-25 08:14:51,424 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.812470  [ 3904/ 4357]
+27628 | 2025-06-25 08:14:52,663 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 81.5%, Avg loss: 0.576449
+27628 | 2025-06-25 08:14:52,663 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 69
+-------------------------------
+27628 | 2025-06-25 08:14:52,787 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.818948  [   64/ 4357]
+27628 | 2025-06-25 08:14:54,008 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.760412  [  704/ 4357]
+27628 | 2025-06-25 08:14:55,228 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.759314  [ 1344/ 4357]
+27628 | 2025-06-25 08:14:56,449 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.783180  [ 1984/ 4357]
+27628 | 2025-06-25 08:14:57,669 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.724491  [ 2624/ 4357]
+27628 | 2025-06-25 08:14:58,889 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.771038  [ 3264/ 4357]
+27628 | 2025-06-25 08:15:00,110 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.801078  [ 3904/ 4357]
+27628 | 2025-06-25 08:15:01,350 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 82.0%, Avg loss: 0.559696
+27628 | 2025-06-25 08:15:01,350 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 70
+-------------------------------
+27628 | 2025-06-25 08:15:01,474 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.796618  [   64/ 4357]
+27628 | 2025-06-25 08:15:02,695 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.747336  [  704/ 4357]
+27628 | 2025-06-25 08:15:03,916 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.752848  [ 1344/ 4357]
+27628 | 2025-06-25 08:15:05,136 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.766610  [ 1984/ 4357]
+27628 | 2025-06-25 08:15:06,357 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.717465  [ 2624/ 4357]
+27628 | 2025-06-25 08:15:07,577 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.765341  [ 3264/ 4357]
+27628 | 2025-06-25 08:15:08,798 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.798467  [ 3904/ 4357]
+27628 | 2025-06-25 08:15:10,037 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 82.2%, Avg loss: 0.554115
+27628 | 2025-06-25 08:15:10,038 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 71
+-------------------------------
+27628 | 2025-06-25 08:15:10,161 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.790187  [   64/ 4357]
+27628 | 2025-06-25 08:15:11,382 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.736591  [  704/ 4357]
+27628 | 2025-06-25 08:15:12,603 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.742307  [ 1344/ 4357]
+27628 | 2025-06-25 08:15:13,823 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.776941  [ 1984/ 4357]
+27628 | 2025-06-25 08:15:15,044 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.710409  [ 2624/ 4357]
+27628 | 2025-06-25 08:15:16,265 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.746357  [ 3264/ 4357]
+27628 | 2025-06-25 08:15:17,486 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.779759  [ 3904/ 4357]
+27628 | 2025-06-25 08:15:18,725 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 82.5%, Avg loss: 0.546811
+27628 | 2025-06-25 08:15:18,725 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 72
+-------------------------------
+27628 | 2025-06-25 08:15:18,848 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.772785  [   64/ 4357]
+27628 | 2025-06-25 08:15:20,069 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.719549  [  704/ 4357]
+27628 | 2025-06-25 08:15:21,290 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.721182  [ 1344/ 4357]
+27628 | 2025-06-25 08:15:22,510 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.758296  [ 1984/ 4357]
+27628 | 2025-06-25 08:15:23,731 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.705127  [ 2624/ 4357]
+27628 | 2025-06-25 08:15:24,951 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.729664  [ 3264/ 4357]
+27628 | 2025-06-25 08:15:26,173 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.775592  [ 3904/ 4357]
+27628 | 2025-06-25 08:15:27,413 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 82.9%, Avg loss: 0.537264
+27628 | 2025-06-25 08:15:27,413 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 73
+-------------------------------
+27628 | 2025-06-25 08:15:27,536 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.771338  [   64/ 4357]
+27628 | 2025-06-25 08:15:28,758 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.710065  [  704/ 4357]
+27628 | 2025-06-25 08:15:29,981 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.720100  [ 1344/ 4357]
+27628 | 2025-06-25 08:15:31,204 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.746375  [ 1984/ 4357]
+27628 | 2025-06-25 08:15:32,425 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.684422  [ 2624/ 4357]
+27628 | 2025-06-25 08:15:33,647 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.727204  [ 3264/ 4357]
+27628 | 2025-06-25 08:15:34,868 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.763958  [ 3904/ 4357]
+27628 | 2025-06-25 08:15:36,109 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 83.3%, Avg loss: 0.521264
+27628 | 2025-06-25 08:15:36,110 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 74
+-------------------------------
+27628 | 2025-06-25 08:15:36,233 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.766038  [   64/ 4357]
+27628 | 2025-06-25 08:15:37,455 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.728161  [  704/ 4357]
+27628 | 2025-06-25 08:15:38,676 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.713557  [ 1344/ 4357]
+27628 | 2025-06-25 08:15:39,897 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.747633  [ 1984/ 4357]
+27628 | 2025-06-25 08:15:41,120 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.681769  [ 2624/ 4357]
+27628 | 2025-06-25 08:15:42,342 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.712945  [ 3264/ 4357]
+27628 | 2025-06-25 08:15:43,563 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.762914  [ 3904/ 4357]
+27628 | 2025-06-25 08:15:44,804 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 83.9%, Avg loss: 0.503491
+27628 | 2025-06-25 08:15:44,804 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 75
+-------------------------------
+27628 | 2025-06-25 08:15:44,927 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.768937  [   64/ 4357]
+27628 | 2025-06-25 08:15:46,149 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.715941  [  704/ 4357]
+27628 | 2025-06-25 08:15:47,371 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.708616  [ 1344/ 4357]
+27628 | 2025-06-25 08:15:48,593 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.738995  [ 1984/ 4357]
+27628 | 2025-06-25 08:15:49,816 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.660264  [ 2624/ 4357]
+27628 | 2025-06-25 08:15:51,038 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.713283  [ 3264/ 4357]
+27628 | 2025-06-25 08:15:52,262 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.747791  [ 3904/ 4357]
+27628 | 2025-06-25 08:15:53,503 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 84.2%, Avg loss: 0.491469
+27628 | 2025-06-25 08:15:53,504 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 76
+-------------------------------
+27628 | 2025-06-25 08:15:53,627 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.737786  [   64/ 4357]
+27628 | 2025-06-25 08:15:54,850 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.699427  [  704/ 4357]
+27628 | 2025-06-25 08:15:56,073 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.698437  [ 1344/ 4357]
+27628 | 2025-06-25 08:15:57,296 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.726940  [ 1984/ 4357]
+27628 | 2025-06-25 08:15:58,519 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.655348  [ 2624/ 4357]
+27628 | 2025-06-25 08:15:59,742 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.701953  [ 3264/ 4357]
+27628 | 2025-06-25 08:16:00,966 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.739713  [ 3904/ 4357]
+27628 | 2025-06-25 08:16:02,209 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 85.0%, Avg loss: 0.471964
+27628 | 2025-06-25 08:16:02,209 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 77
+-------------------------------
+27628 | 2025-06-25 08:16:02,333 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.739679  [   64/ 4357]
+27628 | 2025-06-25 08:16:03,556 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.691439  [  704/ 4357]
+27628 | 2025-06-25 08:16:04,778 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.701284  [ 1344/ 4357]
+27628 | 2025-06-25 08:16:06,001 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.724536  [ 1984/ 4357]
+27628 | 2025-06-25 08:16:07,224 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.664942  [ 2624/ 4357]
+27628 | 2025-06-25 08:16:08,446 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.685818  [ 3264/ 4357]
+27628 | 2025-06-25 08:16:09,669 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.732135  [ 3904/ 4357]
+27628 | 2025-06-25 08:16:10,911 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 84.9%, Avg loss: 0.473702
+27628 | 2025-06-25 08:16:10,911 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 78
+-------------------------------
+27628 | 2025-06-25 08:16:11,035 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.725686  [   64/ 4357]
+27628 | 2025-06-25 08:16:12,258 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.679518  [  704/ 4357]
+27628 | 2025-06-25 08:16:13,480 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.681430  [ 1344/ 4357]
+27628 | 2025-06-25 08:16:14,703 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.710411  [ 1984/ 4357]
+27628 | 2025-06-25 08:16:15,925 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.646146  [ 2624/ 4357]
+27628 | 2025-06-25 08:16:17,149 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.679239  [ 3264/ 4357]
+27628 | 2025-06-25 08:16:18,372 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.714234  [ 3904/ 4357]
+27628 | 2025-06-25 08:16:19,613 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 85.8%, Avg loss: 0.449356
+27628 | 2025-06-25 08:16:19,614 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 79
+-------------------------------
+27628 | 2025-06-25 08:16:19,737 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.706312  [   64/ 4357]
+27628 | 2025-06-25 08:16:20,960 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.664188  [  704/ 4357]
+27628 | 2025-06-25 08:16:22,184 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.673931  [ 1344/ 4357]
+27628 | 2025-06-25 08:16:23,407 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.710175  [ 1984/ 4357]
+27628 | 2025-06-25 08:16:24,631 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.634340  [ 2624/ 4357]
+27628 | 2025-06-25 08:16:25,855 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.664321  [ 3264/ 4357]
+27628 | 2025-06-25 08:16:27,078 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.704892  [ 3904/ 4357]
+27628 | 2025-06-25 08:16:28,321 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 85.3%, Avg loss: 0.459708
+27628 | 2025-06-25 08:16:28,321 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 80
+-------------------------------
+27628 | 2025-06-25 08:16:28,445 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.711837  [   64/ 4357]
+27628 | 2025-06-25 08:16:29,668 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.665790  [  704/ 4357]
+27628 | 2025-06-25 08:16:30,891 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.660918  [ 1344/ 4357]
+27628 | 2025-06-25 08:16:32,114 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.699769  [ 1984/ 4357]
+27628 | 2025-06-25 08:16:33,337 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.630306  [ 2624/ 4357]
+27628 | 2025-06-25 08:16:34,559 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.668683  [ 3264/ 4357]
+27628 | 2025-06-25 08:16:35,782 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.703494  [ 3904/ 4357]
+27628 | 2025-06-25 08:16:37,024 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 85.6%, Avg loss: 0.449597
+27628 | 2025-06-25 08:16:37,024 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 81
+-------------------------------
+27628 | 2025-06-25 08:16:37,148 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.702654  [   64/ 4357]
+27628 | 2025-06-25 08:16:38,370 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.654273  [  704/ 4357]
+27628 | 2025-06-25 08:16:39,593 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.639819  [ 1344/ 4357]
+27628 | 2025-06-25 08:16:40,815 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.688634  [ 1984/ 4357]
+27628 | 2025-06-25 08:16:42,037 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.624284  [ 2624/ 4357]
+27628 | 2025-06-25 08:16:43,259 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.663391  [ 3264/ 4357]
+27628 | 2025-06-25 08:16:44,482 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.695073  [ 3904/ 4357]
+27628 | 2025-06-25 08:16:45,724 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 85.9%, Avg loss: 0.441617
+27628 | 2025-06-25 08:16:45,725 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 82
+-------------------------------
+27628 | 2025-06-25 08:16:45,849 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.692509  [   64/ 4357]
+27628 | 2025-06-25 08:16:47,071 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.653023  [  704/ 4357]
+27628 | 2025-06-25 08:16:48,293 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.638423  [ 1344/ 4357]
+27628 | 2025-06-25 08:16:49,516 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.681055  [ 1984/ 4357]
+27628 | 2025-06-25 08:16:50,738 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.618910  [ 2624/ 4357]
+27628 | 2025-06-25 08:16:51,960 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.644344  [ 3264/ 4357]
+27628 | 2025-06-25 08:16:53,182 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.697925  [ 3904/ 4357]
+27628 | 2025-06-25 08:16:54,423 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 86.1%, Avg loss: 0.433874
+27628 | 2025-06-25 08:16:54,423 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 83
+-------------------------------
+27628 | 2025-06-25 08:16:54,547 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.696197  [   64/ 4357]
+27628 | 2025-06-25 08:16:55,768 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.641892  [  704/ 4357]
+27628 | 2025-06-25 08:16:56,990 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.632676  [ 1344/ 4357]
+27628 | 2025-06-25 08:16:58,211 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.670345  [ 1984/ 4357]
+27628 | 2025-06-25 08:16:59,433 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.609555  [ 2624/ 4357]
+27628 | 2025-06-25 08:17:00,655 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.647343  [ 3264/ 4357]
+27628 | 2025-06-25 08:17:01,876 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.681893  [ 3904/ 4357]
+27628 | 2025-06-25 08:17:03,117 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 86.7%, Avg loss: 0.421585
+27628 | 2025-06-25 08:17:03,118 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 84
+-------------------------------
+27628 | 2025-06-25 08:17:03,241 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.671505  [   64/ 4357]
+27628 | 2025-06-25 08:17:04,462 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.620283  [  704/ 4357]
+27628 | 2025-06-25 08:17:05,684 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.635152  [ 1344/ 4357]
+27628 | 2025-06-25 08:17:06,906 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.661776  [ 1984/ 4357]
+27628 | 2025-06-25 08:17:08,128 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.598239  [ 2624/ 4357]
+27628 | 2025-06-25 08:17:09,350 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.640359  [ 3264/ 4357]
+27628 | 2025-06-25 08:17:10,571 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.659512  [ 3904/ 4357]
+27628 | 2025-06-25 08:17:11,812 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 87.2%, Avg loss: 0.406877
+27628 | 2025-06-25 08:17:11,812 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 85
+-------------------------------
+27628 | 2025-06-25 08:17:11,936 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.664861  [   64/ 4357]
+27628 | 2025-06-25 08:17:13,157 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.635506  [  704/ 4357]
+27628 | 2025-06-25 08:17:14,378 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.614997  [ 1344/ 4357]
+27628 | 2025-06-25 08:17:15,599 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.673109  [ 1984/ 4357]
+27628 | 2025-06-25 08:17:16,821 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.599230  [ 2624/ 4357]
+27628 | 2025-06-25 08:17:18,042 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.628454  [ 3264/ 4357]
+27628 | 2025-06-25 08:17:19,263 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.651049  [ 3904/ 4357]
+27628 | 2025-06-25 08:17:20,503 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 87.4%, Avg loss: 0.397701
+27628 | 2025-06-25 08:17:20,503 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 86
+-------------------------------
+27628 | 2025-06-25 08:17:20,627 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.663890  [   64/ 4357]
+27628 | 2025-06-25 08:17:21,847 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.617712  [  704/ 4357]
+27628 | 2025-06-25 08:17:23,069 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.630112  [ 1344/ 4357]
+27628 | 2025-06-25 08:17:24,291 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.655793  [ 1984/ 4357]
+27628 | 2025-06-25 08:17:25,513 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.585241  [ 2624/ 4357]
+27628 | 2025-06-25 08:17:26,735 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.631392  [ 3264/ 4357]
+27628 | 2025-06-25 08:17:27,956 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.656832  [ 3904/ 4357]
+27628 | 2025-06-25 08:17:29,196 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 87.5%, Avg loss: 0.401567
+27628 | 2025-06-25 08:17:29,196 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 87
+-------------------------------
+27628 | 2025-06-25 08:17:29,320 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.654774  [   64/ 4357]
+27628 | 2025-06-25 08:17:30,540 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.605575  [  704/ 4357]
+27628 | 2025-06-25 08:17:31,761 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.601967  [ 1344/ 4357]
+27628 | 2025-06-25 08:17:32,981 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.657141  [ 1984/ 4357]
+27628 | 2025-06-25 08:17:34,202 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.580926  [ 2624/ 4357]
+27628 | 2025-06-25 08:17:35,422 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.619672  [ 3264/ 4357]
+27628 | 2025-06-25 08:17:36,643 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.649729  [ 3904/ 4357]
+27628 | 2025-06-25 08:17:37,882 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 88.0%, Avg loss: 0.380497
+27628 | 2025-06-25 08:17:37,882 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 88
+-------------------------------
+27628 | 2025-06-25 08:17:38,005 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.653660  [   64/ 4357]
+27628 | 2025-06-25 08:17:39,226 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.591615  [  704/ 4357]
+27628 | 2025-06-25 08:17:40,446 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.599706  [ 1344/ 4357]
+27628 | 2025-06-25 08:17:41,667 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.633292  [ 1984/ 4357]
+27628 | 2025-06-25 08:17:42,888 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.576493  [ 2624/ 4357]
+27628 | 2025-06-25 08:17:44,108 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.605261  [ 3264/ 4357]
+27628 | 2025-06-25 08:17:45,330 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.649974  [ 3904/ 4357]
+27628 | 2025-06-25 08:17:46,569 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 88.4%, Avg loss: 0.367192
+27628 | 2025-06-25 08:17:46,569 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 89
+-------------------------------
+27628 | 2025-06-25 08:17:46,692 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.637522  [   64/ 4357]
+27628 | 2025-06-25 08:17:47,913 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.586712  [  704/ 4357]
+27628 | 2025-06-25 08:17:49,133 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.604418  [ 1344/ 4357]
+27628 | 2025-06-25 08:17:50,355 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.636602  [ 1984/ 4357]
+27628 | 2025-06-25 08:17:51,575 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.568771  [ 2624/ 4357]
+27628 | 2025-06-25 08:17:52,796 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.609807  [ 3264/ 4357]
+27628 | 2025-06-25 08:17:54,017 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.642878  [ 3904/ 4357]
+27628 | 2025-06-25 08:17:55,257 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 88.5%, Avg loss: 0.362665
+27628 | 2025-06-25 08:17:55,257 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 90
+-------------------------------
+27628 | 2025-06-25 08:17:55,381 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.639601  [   64/ 4357]
+27628 | 2025-06-25 08:17:56,601 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.591780  [  704/ 4357]
+27628 | 2025-06-25 08:17:57,821 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.581075  [ 1344/ 4357]
+27628 | 2025-06-25 08:17:59,042 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.625974  [ 1984/ 4357]
+27628 | 2025-06-25 08:18:00,262 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.565847  [ 2624/ 4357]
+27628 | 2025-06-25 08:18:01,482 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.601899  [ 3264/ 4357]
+27628 | 2025-06-25 08:18:02,702 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.628123  [ 3904/ 4357]
+27628 | 2025-06-25 08:18:03,941 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 88.4%, Avg loss: 0.368695
+27628 | 2025-06-25 08:18:03,942 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 91
+-------------------------------
+27628 | 2025-06-25 08:18:04,065 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.640798  [   64/ 4357]
+27628 | 2025-06-25 08:18:05,286 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.584635  [  704/ 4357]
+27628 | 2025-06-25 08:18:06,506 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.589562  [ 1344/ 4357]
+27628 | 2025-06-25 08:18:07,726 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.614547  [ 1984/ 4357]
+27628 | 2025-06-25 08:18:08,947 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.564282  [ 2624/ 4357]
+27628 | 2025-06-25 08:18:10,167 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.603322  [ 3264/ 4357]
+27628 | 2025-06-25 08:18:11,387 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.615395  [ 3904/ 4357]
+27628 | 2025-06-25 08:18:12,626 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 88.6%, Avg loss: 0.361005
+27628 | 2025-06-25 08:18:12,626 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 92
+-------------------------------
+27628 | 2025-06-25 08:18:12,750 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.625959  [   64/ 4357]
+27628 | 2025-06-25 08:18:13,970 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.570315  [  704/ 4357]
+27628 | 2025-06-25 08:18:15,190 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.576216  [ 1344/ 4357]
+27628 | 2025-06-25 08:18:16,410 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.602744  [ 1984/ 4357]
+27628 | 2025-06-25 08:18:17,631 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.548848  [ 2624/ 4357]
+27628 | 2025-06-25 08:18:18,852 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.580864  [ 3264/ 4357]
+27628 | 2025-06-25 08:18:20,074 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.610365  [ 3904/ 4357]
+27628 | 2025-06-25 08:18:21,314 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 88.6%, Avg loss: 0.360541
+27628 | 2025-06-25 08:18:21,314 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 93
+-------------------------------
+27628 | 2025-06-25 08:18:21,438 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.625329  [   64/ 4357]
+27628 | 2025-06-25 08:18:22,658 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.582031  [  704/ 4357]
+27628 | 2025-06-25 08:18:23,878 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.564031  [ 1344/ 4357]
+27628 | 2025-06-25 08:18:25,098 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.604957  [ 1984/ 4357]
+27628 | 2025-06-25 08:18:26,319 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.539112  [ 2624/ 4357]
+27628 | 2025-06-25 08:18:27,539 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.592645  [ 3264/ 4357]
+27628 | 2025-06-25 08:18:28,759 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.616534  [ 3904/ 4357]
+27628 | 2025-06-25 08:18:29,999 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 89.2%, Avg loss: 0.344208
+27628 | 2025-06-25 08:18:29,999 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 94
+-------------------------------
+27628 | 2025-06-25 08:18:30,122 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.617257  [   64/ 4357]
+27628 | 2025-06-25 08:18:31,342 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.564745  [  704/ 4357]
+27628 | 2025-06-25 08:18:32,563 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.559230  [ 1344/ 4357]
+27628 | 2025-06-25 08:18:33,783 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.581326  [ 1984/ 4357]
+27628 | 2025-06-25 08:18:35,003 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.537648  [ 2624/ 4357]
+27628 | 2025-06-25 08:18:36,224 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.576565  [ 3264/ 4357]
+27628 | 2025-06-25 08:18:37,445 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.620064  [ 3904/ 4357]
+27628 | 2025-06-25 08:18:38,684 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 88.9%, Avg loss: 0.350746
+27628 | 2025-06-25 08:18:38,684 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 95
+-------------------------------
+27628 | 2025-06-25 08:18:38,808 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.600027  [   64/ 4357]
+27628 | 2025-06-25 08:18:40,028 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.549081  [  704/ 4357]
+27628 | 2025-06-25 08:18:41,248 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.547162  [ 1344/ 4357]
+27628 | 2025-06-25 08:18:42,468 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.564981  [ 1984/ 4357]
+27628 | 2025-06-25 08:18:43,688 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.526397  [ 2624/ 4357]
+27628 | 2025-06-25 08:18:44,908 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.562892  [ 3264/ 4357]
+27628 | 2025-06-25 08:18:46,130 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.603886  [ 3904/ 4357]
+27628 | 2025-06-25 08:18:47,369 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 88.6%, Avg loss: 0.357678
+27628 | 2025-06-25 08:18:47,369 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 96
+-------------------------------
+27628 | 2025-06-25 08:18:47,492 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.605382  [   64/ 4357]
+27628 | 2025-06-25 08:18:48,712 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.551536  [  704/ 4357]
+27628 | 2025-06-25 08:18:49,932 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.546836  [ 1344/ 4357]
+27628 | 2025-06-25 08:18:51,153 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.577146  [ 1984/ 4357]
+27628 | 2025-06-25 08:18:52,373 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.518954  [ 2624/ 4357]
+27628 | 2025-06-25 08:18:53,594 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.566076  [ 3264/ 4357]
+27628 | 2025-06-25 08:18:54,814 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.588375  [ 3904/ 4357]
+27628 | 2025-06-25 08:18:56,053 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 89.0%, Avg loss: 0.344190
+27628 | 2025-06-25 08:18:56,053 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 97
+-------------------------------
+27628 | 2025-06-25 08:18:56,176 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.580196  [   64/ 4357]
+27628 | 2025-06-25 08:18:57,396 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.554183  [  704/ 4357]
+27628 | 2025-06-25 08:18:58,615 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.552276  [ 1344/ 4357]
+27628 | 2025-06-25 08:18:59,835 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.564082  [ 1984/ 4357]
+27628 | 2025-06-25 08:19:01,055 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.519050  [ 2624/ 4357]
+27628 | 2025-06-25 08:19:02,275 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.550206  [ 3264/ 4357]
+27628 | 2025-06-25 08:19:03,495 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.583303  [ 3904/ 4357]
+27628 | 2025-06-25 08:19:04,733 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 89.0%, Avg loss: 0.343541
+27628 | 2025-06-25 08:19:04,733 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 98
+-------------------------------
+27628 | 2025-06-25 08:19:04,857 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.578826  [   64/ 4357]
+27628 | 2025-06-25 08:19:06,077 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.532875  [  704/ 4357]
+27628 | 2025-06-25 08:19:07,296 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.549557  [ 1344/ 4357]
+27628 | 2025-06-25 08:19:08,517 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.565093  [ 1984/ 4357]
+27628 | 2025-06-25 08:19:09,737 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.518070  [ 2624/ 4357]
+27628 | 2025-06-25 08:19:10,957 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.552677  [ 3264/ 4357]
+27628 | 2025-06-25 08:19:12,177 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.568225  [ 3904/ 4357]
+27628 | 2025-06-25 08:19:13,417 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 89.5%, Avg loss: 0.331344
+27628 | 2025-06-25 08:19:13,417 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 99
+-------------------------------
+27628 | 2025-06-25 08:19:13,540 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.576777  [   64/ 4357]
+27628 | 2025-06-25 08:19:14,761 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.531532  [  704/ 4357]
+27628 | 2025-06-25 08:19:15,981 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.539573  [ 1344/ 4357]
+27628 | 2025-06-25 08:19:17,201 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.560250  [ 1984/ 4357]
+27628 | 2025-06-25 08:19:18,421 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.506004  [ 2624/ 4357]
+27628 | 2025-06-25 08:19:19,641 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.537122  [ 3264/ 4357]
+27628 | 2025-06-25 08:19:20,861 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.558989  [ 3904/ 4357]
+27628 | 2025-06-25 08:19:22,099 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 89.7%, Avg loss: 0.324046
+27628 | 2025-06-25 08:19:22,099 | 🔵 info | <module>   |      zero_train.py:51 | Epoch 100
+-------------------------------
+27628 | 2025-06-25 08:19:22,222 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.572872  [   64/ 4357]
+27628 | 2025-06-25 08:19:23,442 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.535533  [  704/ 4357]
+27628 | 2025-06-25 08:19:24,661 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.535567  [ 1344/ 4357]
+27628 | 2025-06-25 08:19:25,882 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.549035  [ 1984/ 4357]
+27628 | 2025-06-25 08:19:27,101 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.486676  [ 2624/ 4357]
+27628 | 2025-06-25 08:19:28,320 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.535471  [ 3264/ 4357]
+27628 | 2025-06-25 08:19:29,538 | 🔵 info | train_loop | func/train_test.py:35 | loss: 0.576869  [ 3904/ 4357]
+27628 | 2025-06-25 08:19:30,776 | 🔵 info | test_loop  | func/train_test.py:59 | Test Error: Accuracy: 90.0%, Avg loss: 0.316277
+27628 | 2025-06-25 08:19:30,776 | 🔵 info | <module>   |      zero_train.py:56 | Done!
+27628 | 2025-06-25 08:19:30,832 | 🔵 info | <module>   |      zero_train.py:61 | Saved PyTorch Model State to zero.pth
+------+-------------------------+---------+------------+-----------------------+-----------------------------------------
+27628 | 2025-06-25 08:19:30,832 | 🔵 info | log_wrap   |              logab:0  | Execution time 14 minutes 29.7842 seconds
