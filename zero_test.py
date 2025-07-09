@@ -8,7 +8,7 @@ from transformer_zero import TransformerZeroModel
 model = TransformerZeroModel().to(device)
 model.load_state_dict(torch.load("zero.pth", map_location=device))
 model.eval()
-
+model.train()
 
 print("device is: ", device)
 # # count
